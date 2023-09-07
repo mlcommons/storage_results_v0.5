@@ -1,0 +1,97 @@
++ clush -abS 'if mount -t lustre |grep . ; then umount -t lustre -a && lustre_rmmod ; fi'
+clush:  0/16clush:  1/16clush:  2/16clush:  3/16clush:  5/16clush:  7/16clush:  8/16clush: 10/16clush: 11/16clush: 13/16clush: 14/16clush: 15/16             clush: 16/16---------------
+c[017-032] (16)
+---------------
+172.16.240.80@o2ib,172.16.241.80@o2ib:172.16.240.81@o2ib,172.16.241.81@o2ib:/ai400x2 on /lustre/ai400x2/client type lustre (rw,flock,lazystatfs,encrypt)
++ clush -abS 'if lsmod |grep lustre ; then lustre_rmmod ; fi'
++ clush -abS 'if [ -d /root/exa-client ] ; then rm -rf /root/exa-client ; fi'
++ clush -abS 'if [ -f /etc/modprobe.d/lustre.conf ] ; then rm /etc/modprobe.d/lustre.conf ; fi'
++ scp '172.16.240.80:/scratch/EXA*/exa-client-6.2.0.tar.gz' /root/
++ cd /root
++ tar xvf exa-client-6.2.0.tar.gz
+exa-client/
+exa-client/lipe/
+exa-client/lipe/ubuntu2204/
+exa-client/lipe/ubuntu2204/lipe-lpcc_2.23-605-g2c36b5c-1_all.deb
+exa-client/lipe/el7/
+exa-client/lipe/el7/lipe-lpcc-2.23_605_g2c36b5c-1.el7.x86_64.rpm
+exa-client/lipe/el7/lipe-pylustre-2.23_605_g2c36b5c-1.el7.x86_64.rpm
+exa-client/lipe/el9/
+exa-client/lipe/el9/lipe-pylustre-2.23_605_g2c36b5c-1.el9.x86_64.rpm
+exa-client/lipe/el9/lipe-lpcc-2.23_605_g2c36b5c-1.el9.x86_64.rpm
+exa-client/lipe/el8/
+exa-client/lipe/el8/lipe-pylustre-2.23_605_g2c36b5c-1.el8.x86_64.rpm
+exa-client/lipe/el8/lipe-lpcc-2.23_605_g2c36b5c-1.el8.x86_64.rpm
+exa-client/lipe/ubuntu2004/
+exa-client/lipe/ubuntu2004/lipe-lpcc_2.23-605-g2c36b5c-1_all.deb
+exa-client/lipe/ubuntu1804/
+exa-client/lipe/ubuntu1804/lipe-lpcc_2.23-605-g2c36b5c-1_all.deb
+exa-client/tune_lustre-X2.sh
+exa-client/exa_client_deploy.py
+exa-client/fscrypt/
+exa-client/fscrypt/ubuntu2204/
+exa-client/fscrypt/ubuntu2204/fscrypt_0.3.3-wc2_amd64.deb
+exa-client/fscrypt/el9/
+exa-client/fscrypt/el9/fscrypt-0.3.3-1.wc2.x86_64.rpm
+exa-client/fscrypt/el8/
+exa-client/fscrypt/el8/fscrypt-0.3.3-1.wc2.x86_64.rpm
+exa-client/fscrypt/ubuntu2004/
+exa-client/fscrypt/ubuntu2004/fscrypt_0.3.3-wc2_amd64.deb
+exa-client/fscrypt/ubuntu1804/
+exa-client/fscrypt/ubuntu1804/fscrypt_0.3.3-wc2_amd64.deb
+exa-client/README
+exa-client/lustre-source.tar.gz
+exa-client/tune_lustre.sh
++ clush -abcS /root/exa-client/
+clush:  4/16clush:  5/16clush:  7/16clush: 15/16             clush: 16/16+ clush -abS '(cd /root/exa-client && ./exa_client_deploy.py -c -y --lnets "o2ib(ib0)")'
+clush:  0/16clush:  8/16clush: 15/16             clush: 16/16---------------
+c[017-032] (16)
+---------------
+
+Apply Relax Ordering (mlx) [Y/n]: yes
+
+EXAScaler client software is configured
+
+Persistency enabled (see /opt/ddn/exascaler/systemd/exa-client-deploy.service)
+$ systemctl restart exa-client-deploy # Restart
+$ systemctl status  exa-client-deploy # Status
+$ systemctl disable exa-client-deploy # Disable
+
++ clush -abS 'mkdir -p /lustre/ai400x2/client'
++ sleep 5
++ clush -abS 'mount -t lustre 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 /lustre/ai400x2/client'
+c024: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c024: Is the MGS running?
+c023: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c023: Is the MGS running?
+c019: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c019: Is the MGS running?
+c032: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c032: Is the MGS running?
+c030: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c030: Is the MGS running?
+c017: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c017: Is the MGS running?
+c022: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c022: Is the MGS running?
+c029: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c029: Is the MGS running?
+c031: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c031: Is the MGS running?
+c027: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c027: Is the MGS running?
+c025: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c025: Is the MGS running?
+c020: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c020: Is the MGS running?
+c018: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c018: Is the MGS running?
+c021: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c021: Is the MGS running?
+c026: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c026: Is the MGS running?
+c028: mount.lustre: mount 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 at /lustre/ai400x2/client failed: Input/output error
+c028: Is the MGS running?
+clush:  0/16             clush:  1/16             clush: 13/16             clush: 16/16clush: c[017-032] (16): exited with exit code 5
++ sleep 5
++ clush -abS 'mount -t lustre 172.16.240.80@o2ib0,172.16.241.80@o2ib0:172.16.240.81@o2ib0,172.16.241.81@o2ib0:/ai400x2 /lustre/ai400x2/client'

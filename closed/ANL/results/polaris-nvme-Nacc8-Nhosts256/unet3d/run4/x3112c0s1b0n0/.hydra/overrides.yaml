@@ -1,0 +1,3 @@
+- workload=unet3d
+- ++workload.dataset.data_folder=/local/scratch//data/unet3d_8x256/2023-08-03-15-41-04/x3112c0s1b0n0
+- ++workload.dataset.num_files_train=3200

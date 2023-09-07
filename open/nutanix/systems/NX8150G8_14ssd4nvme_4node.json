@@ -1,0 +1,13 @@
+{
+  "name": "Nutanix Objects Node",
+  "model": "NX8150G8",
+  "hypervisor_version": "Nutanix AHV 20220304.10057",
+  "aos_version": "Nutanix AOS 6.6.2.6",
+  "objects_version": "4.0",
+  "node_count": "4",
+  "cpu": "2x Intel(R) Xeon(R) Platinum 8358",
+  "dram": "512GB",
+  "network": "2x ConnectX-6 100GbE",
+  "nvme_drives": "4x SAMSUNG MZQL23T8HCLS-00A07 3.84TB",
+  "ssd_drives": "14x SAMSUNG MZ7LH3T8HMLT-00005 3.84TB"
+}

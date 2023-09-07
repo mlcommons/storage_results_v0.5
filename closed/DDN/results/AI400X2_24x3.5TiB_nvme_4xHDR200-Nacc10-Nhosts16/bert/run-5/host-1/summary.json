@@ -1,0 +1,26 @@
+{
+    "model": "bert",
+    "start": "2023-08-02T14:46:10.969490",
+    "num_accelerators": 10,
+    "hostname": "c017",
+    "metric": {
+        "train_au_percentage": [
+            99.40240034638366
+        ],
+        "train_au_mean_percentage": 99.40240034638366,
+        "train_au_meet_expectation": "success",
+        "train_au_stdev_percentage": 0.0,
+        "train_throughput_samples_per_second": [
+            492.76119237751226
+        ],
+        "train_throughput_mean_samples_per_second": 492.76119237751226,
+        "train_throughput_stdev_samples_per_second": 0.0,
+        "train_io_mean_MB_per_second": 1.1748342332303816,
+        "train_io_stdev_MB_per_second": 0.0
+    },
+    "num_files_train": 671,
+    "num_files_eval": 0,
+    "num_samples_per_file": 313532,
+    "epochs": 1,
+    "end": "2023-08-02T15:02:41.732624"
+}

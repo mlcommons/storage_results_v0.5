@@ -1,0 +1,587 @@
++ export 'param_storage_type=--param storage.storage_type=local_fs'
++ param_storage_type='--param storage.storage_type=local_fs'
++ export 'param_storage_root=--param storage.storage_root=/lustre/ai400x2/client'
++ param_storage_root='--param storage.storage_root=/lustre/ai400x2/client'
++ clush -abS '(cd /root/storage-v0.5/ && ./benchmark.sh datagen --workload bert 	       --num-parallel 32 	       --param dataset.num_files_train=671 	       --param dataset.data_folder=/lustre/ai400x2/client/datagen_bert_${HOSTNAME}  	       --param storage.storage_type=local_fs --param storage.storage_root=/lustre/ai400x2/client)'
+c023: [INFO] 2023-08-02T13:33:00.164145 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c023: [INFO] 2023-08-02T13:33:00.164326 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c023: [INFO] 2023-08-02T13:33:00.221948 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c029: [INFO] 2023-08-02T13:33:00.225125 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c029: [INFO] 2023-08-02T13:33:00.225307 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c019: [INFO] 2023-08-02T13:33:00.257800 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c019: [INFO] 2023-08-02T13:33:00.257970 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c029: [INFO] 2023-08-02T13:33:00.272936 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c019: [INFO] 2023-08-02T13:33:00.295781 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c031: [INFO] 2023-08-02T13:33:00.288739 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c031: [INFO] 2023-08-02T13:33:00.288893 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c031: [INFO] 2023-08-02T13:33:00.338585 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c024: [INFO] 2023-08-02T13:33:00.347010 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c024: [INFO] 2023-08-02T13:33:00.347186 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c023: [INFO] 2023-08-02T13:33:00.350956 Generating dataset in /lustre/ai400x2/client/datagen_bert_c023/train and /lustre/ai400x2/client/datagen_bert_c023/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c023: [INFO] 2023-08-02T13:33:00.351072 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c023: [INFO] 2023-08-02T13:33:00.351124 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c023: [INFO] 2023-08-02T13:33:00.352574 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:33:00.356571 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c022: [INFO] 2023-08-02T13:33:00.356736 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c024: [INFO] 2023-08-02T13:33:00.379823 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c030: [INFO] 2023-08-02T13:33:00.373418 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c030: [INFO] 2023-08-02T13:33:00.373600 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c022: [INFO] 2023-08-02T13:33:00.406373 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c032: [INFO] 2023-08-02T13:33:00.409952 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c032: [INFO] 2023-08-02T13:33:00.410134 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c018: [INFO] 2023-08-02T13:33:00.415526 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c018: [INFO] 2023-08-02T13:33:00.415839 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c029: [INFO] 2023-08-02T13:33:00.421934 Generating dataset in /lustre/ai400x2/client/datagen_bert_c029/train and /lustre/ai400x2/client/datagen_bert_c029/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c029: [INFO] 2023-08-02T13:33:00.422048 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c029: [INFO] 2023-08-02T13:33:00.422100 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c025: [INFO] 2023-08-02T13:33:00.405046 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c025: [INFO] 2023-08-02T13:33:00.405235 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c029: [INFO] 2023-08-02T13:33:00.423619 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:33:00.426191 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c032: [INFO] 2023-08-02T13:33:00.441747 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c026: [INFO] 2023-08-02T13:33:00.422234 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c026: [INFO] 2023-08-02T13:33:00.422408 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c018: [INFO] 2023-08-02T13:33:00.443312 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c025: [INFO] 2023-08-02T13:33:00.454818 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c019: [INFO] 2023-08-02T13:33:00.466523 Generating dataset in /lustre/ai400x2/client/datagen_bert_c019/train and /lustre/ai400x2/client/datagen_bert_c019/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c019: [INFO] 2023-08-02T13:33:00.466636 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c019: [INFO] 2023-08-02T13:33:00.466686 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c019: [INFO] 2023-08-02T13:33:00.468106 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:33:00.524588 Generating dataset in /lustre/ai400x2/client/datagen_bert_c031/train and /lustre/ai400x2/client/datagen_bert_c031/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c031: [INFO] 2023-08-02T13:33:00.524684 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c031: [INFO] 2023-08-02T13:33:00.524733 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c031: [INFO] 2023-08-02T13:33:00.526180 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:33:00.543042 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c022: [INFO] 2023-08-02T13:33:00.550393 Generating dataset in /lustre/ai400x2/client/datagen_bert_c022/train and /lustre/ai400x2/client/datagen_bert_c022/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c022: [INFO] 2023-08-02T13:33:00.550529 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c022: [INFO] 2023-08-02T13:33:00.550582 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c022: [INFO] 2023-08-02T13:33:00.552031 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:33:00.549785 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c021: [INFO] 2023-08-02T13:33:00.549956 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c030: [INFO] 2023-08-02T13:33:00.573179 Generating dataset in /lustre/ai400x2/client/datagen_bert_c030/train and /lustre/ai400x2/client/datagen_bert_c030/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c030: [INFO] 2023-08-02T13:33:00.573295 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c030: [INFO] 2023-08-02T13:33:00.573343 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c030: [INFO] 2023-08-02T13:33:00.574842 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:33:00.576818 Generating dataset in /lustre/ai400x2/client/datagen_bert_c024/train and /lustre/ai400x2/client/datagen_bert_c024/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c024: [INFO] 2023-08-02T13:33:00.576932 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c024: [INFO] 2023-08-02T13:33:00.576981 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c024: [INFO] 2023-08-02T13:33:00.578443 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:33:00.595584 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c020: [INFO] 2023-08-02T13:33:00.599631 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c020: [INFO] 2023-08-02T13:33:00.599813 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c032: [INFO] 2023-08-02T13:33:00.611744 Generating dataset in /lustre/ai400x2/client/datagen_bert_c032/train and /lustre/ai400x2/client/datagen_bert_c032/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c032: [INFO] 2023-08-02T13:33:00.611857 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c032: [INFO] 2023-08-02T13:33:00.611907 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c032: [INFO] 2023-08-02T13:33:00.613375 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:33:00.613808 Generating dataset in /lustre/ai400x2/client/datagen_bert_c025/train and /lustre/ai400x2/client/datagen_bert_c025/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c025: [INFO] 2023-08-02T13:33:00.613910 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c025: [INFO] 2023-08-02T13:33:00.613958 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c025: [INFO] 2023-08-02T13:33:00.615376 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:33:00.615310 Generating dataset in /lustre/ai400x2/client/datagen_bert_c018/train and /lustre/ai400x2/client/datagen_bert_c018/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c018: [INFO] 2023-08-02T13:33:00.615426 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c018: [INFO] 2023-08-02T13:33:00.615478 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c018: [INFO] 2023-08-02T13:33:00.616961 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:33:00.636422 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c028: [INFO] 2023-08-02T13:33:00.682607 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c028: [INFO] 2023-08-02T13:33:00.682784 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c017: [INFO] 2023-08-02T13:33:00.678305 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c017: [INFO] 2023-08-02T13:33:00.678486 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c026: [INFO] 2023-08-02T13:33:00.691046 Generating dataset in /lustre/ai400x2/client/datagen_bert_c026/train and /lustre/ai400x2/client/datagen_bert_c026/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c026: [INFO] 2023-08-02T13:33:00.691178 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c026: [INFO] 2023-08-02T13:33:00.691234 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c026: [INFO] 2023-08-02T13:33:00.692737 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:33:00.713411 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c021: [INFO] 2023-08-02T13:33:00.722584 Generating dataset in /lustre/ai400x2/client/datagen_bert_c021/train and /lustre/ai400x2/client/datagen_bert_c021/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c021: [INFO] 2023-08-02T13:33:00.722712 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c021: [INFO] 2023-08-02T13:33:00.722766 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c021: [INFO] 2023-08-02T13:33:00.724222 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:33:00.728092 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c020: [INFO] 2023-08-02T13:33:00.759424 Generating dataset in /lustre/ai400x2/client/datagen_bert_c020/train and /lustre/ai400x2/client/datagen_bert_c020/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c020: [INFO] 2023-08-02T13:33:00.759545 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c020: [INFO] 2023-08-02T13:33:00.759597 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c020: [INFO] 2023-08-02T13:33:00.761095 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:33:00.777265 Running DLIO with 32 process(es) [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:104]
+c027: [INFO] 2023-08-02T13:33:00.777442 Reading workload YAML config file '/root/storage-v0.5/storage-conf/workload/bert.yaml' [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:106]
+c027: [INFO] 2023-08-02T13:33:00.816994 Starting data generation [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:161]
+c028: [INFO] 2023-08-02T13:33:00.839409 Generating dataset in /lustre/ai400x2/client/datagen_bert_c028/train and /lustre/ai400x2/client/datagen_bert_c028/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c028: [INFO] 2023-08-02T13:33:00.839519 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c028: [INFO] 2023-08-02T13:33:00.839570 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c028: [INFO] 2023-08-02T13:33:00.841029 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:33:00.860096 Generating dataset in /lustre/ai400x2/client/datagen_bert_c017/train and /lustre/ai400x2/client/datagen_bert_c017/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c017: [INFO] 2023-08-02T13:33:00.860233 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c017: [INFO] 2023-08-02T13:33:00.860287 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c017: [INFO] 2023-08-02T13:33:00.861785 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:33:00.928992 Generating dataset in /lustre/ai400x2/client/datagen_bert_c027/train and /lustre/ai400x2/client/datagen_bert_c027/valid [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:67]
+c027: [INFO] 2023-08-02T13:33:00.929100 Number of files for training dataset: 671 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:68]
+c027: [INFO] 2023-08-02T13:33:00.929150 Number of files for validation dataset: 0 [/root/storage-v0.5/dlio_benchmark/src/data_generator/data_generator.py:69]
+c027: [INFO] 2023-08-02T13:33:00.930653 Generating TFRecord Data: [>------------------------------------------------------------] 0.1% 1 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:33:09.968383 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:33:10.010675 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:33:10.788485 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:33:12.147591 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:33:14.408151 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:33:16.338793 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:33:17.113054 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:33:17.433264 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:33:17.540328 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:33:17.930800 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:33:18.184398 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:33:19.052542 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:33:19.181047 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:33:19.295565 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:33:19.793154 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:33:21.591574 Generating TFRecord Data: [===>---------------------------------------------------------] 4.9% 33 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:33:25.109120 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:33:26.666930 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:33:26.830094 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:33:27.645560 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:33:28.091108 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:33:28.686162 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:33:29.954481 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:33:31.047904 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:33:32.069539 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:33:33.906146 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:33:33.940950 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:33:35.034326 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:33:36.811628 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:33:38.160265 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:33:38.204546 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:33:38.435126 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:33:38.429432 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:33:38.656809 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:33:40.946235 Generating TFRecord Data: [======>------------------------------------------------------] 9.7% 65 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:33:43.256954 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:33:45.914469 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:33:46.444218 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:33:46.831838 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:33:47.129527 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:33:47.728372 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:33:48.016808 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:33:48.579638 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:33:49.938057 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:33:52.054479 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:33:52.216654 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:33:52.622146 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:33:52.885890 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:33:53.287620 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:33:53.663016 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:33:56.349924 Generating TFRecord Data: [=========>---------------------------------------------------] 14.5% 97 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:33:56.747810 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:33:57.056083 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:33:59.104871 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:33:59.751596 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:34:00.061216 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:34:00.616884 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:34:05.025265 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:34:05.627776 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:34:06.402022 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:34:08.135059 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:34:08.137161 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:34:08.933593 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:34:09.727231 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:34:09.866451 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:34:10.231786 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:34:10.434528 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:34:11.109027 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:34:11.195165 Generating TFRecord Data: [============>------------------------------------------------] 19.2% 129 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:34:15.448010 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:34:17.406649 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:34:18.395676 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:34:18.557206 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:34:19.961276 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:34:20.069133 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:34:21.611346 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:34:23.636359 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:34:24.240881 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:34:24.298872 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:34:24.423870 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:34:24.575874 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:34:26.252752 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:34:27.468507 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:34:27.657515 Generating TFRecord Data: [==============>----------------------------------------------] 24.0% 161 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:34:27.653228 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:34:29.109483 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:34:31.388146 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:34:33.425501 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:34:33.511593 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:34:35.003030 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:34:35.783243 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:34:36.134431 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:34:37.938742 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:34:40.503354 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:34:41.885910 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:34:42.431659 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:34:42.798871 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:34:43.315105 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:34:43.367902 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:34:44.105373 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:34:44.946466 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:34:45.302116 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:34:46.485062 Generating TFRecord Data: [=================>-------------------------------------------] 28.8% 193 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:34:47.282477 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:34:48.955749 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:34:50.651345 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:34:51.484245 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:34:51.477081 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:34:51.622728 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:34:52.455380 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:34:52.911595 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:34:56.740388 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:34:56.751455 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:34:56.954151 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:34:59.480214 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:34:59.684469 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:35:00.463203 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:35:01.798794 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:35:02.080295 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:35:03.179879 Generating TFRecord Data: [====================>----------------------------------------] 33.5% 225 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:35:06.157929 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:35:06.480755 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:35:06.642824 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:35:06.846426 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:35:07.568925 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:35:07.981250 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:35:09.680468 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:35:10.218420 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:35:10.251145 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:35:11.105350 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:35:11.976478 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:35:14.706050 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:35:15.456799 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:35:19.413589 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:35:19.847807 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:35:21.636230 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:35:22.569585 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:35:23.114218 Generating TFRecord Data: [=======================>-------------------------------------] 38.3% 257 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:35:23.577129 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:35:24.911665 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:35:25.216436 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:35:25.790533 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:35:26.184290 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:35:26.938108 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:35:27.720244 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:35:28.798415 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:35:29.092409 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:35:29.089464 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:35:30.158406 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:35:35.869629 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:35:35.997286 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:35:36.426777 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:35:37.821806 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:35:37.862437 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:35:38.454944 Generating TFRecord Data: [==========================>----------------------------------] 43.1% 289 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:35:38.881630 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:35:39.470507 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:35:39.793103 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:35:41.774383 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:35:43.091009 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:35:44.891389 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:35:45.105112 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:35:46.353709 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:35:47.380182 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:35:48.135473 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:35:48.760964 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:35:49.974520 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:35:50.564517 Generating TFRecord Data: [=============================>-------------------------------] 47.8% 321 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:35:52.893925 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:35:53.980962 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:35:55.337545 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:35:56.290978 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:35:56.416422 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:35:56.743278 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:35:57.389129 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:35:57.909066 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:35:58.230635 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:35:58.418583 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:35:58.698878 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:36:02.427261 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:36:02.609030 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:36:06.462467 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:36:06.560782 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:36:06.604479 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:36:06.916323 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:36:07.516856 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:36:07.731436 Generating TFRecord Data: [================================>----------------------------] 52.6% 353 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:36:08.109213 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:36:08.595149 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:36:11.768088 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:36:12.929994 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:36:12.996694 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:36:13.294646 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:36:17.062882 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:36:17.509811 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:36:18.638009 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:36:19.049643 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:36:19.410160 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:36:20.483989 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:36:20.498020 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:36:21.685172 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:36:21.950712 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:36:24.178414 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:36:24.969953 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:36:26.061278 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:36:26.869691 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:36:27.614407 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:36:27.821879 Generating TFRecord Data: [==================================>--------------------------] 57.4% 385 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:36:29.782668 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:36:31.503624 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:36:31.808533 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:36:32.498407 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:36:33.245941 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:36:33.269951 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:36:34.859828 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:36:35.321595 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:36:38.411895 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:36:38.710411 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:36:39.922435 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:36:40.857472 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:36:41.318601 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:36:42.283371 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:36:43.624179 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:36:44.229001 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:36:46.214507 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:36:46.905874 Generating TFRecord Data: [=====================================>-----------------------] 62.1% 417 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:36:47.387245 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:36:48.549890 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:36:49.171334 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:36:50.399653 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:36:51.309669 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:36:52.187554 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:36:52.845042 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:36:54.578689 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:36:55.075552 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:36:56.969474 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:36:57.365405 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:36:57.612151 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:36:57.924103 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:37:00.516388 Generating TFRecord Data: [========================================>--------------------] 66.9% 449 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:37:02.281723 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:37:02.447631 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:37:05.508897 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:37:06.243354 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:37:06.574300 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:37:08.186936 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:37:08.595863 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:37:09.094064 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:37:10.190050 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:37:11.570068 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:37:12.639777 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:37:13.299469 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:37:13.686946 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:37:14.065149 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:37:16.793381 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:37:17.380825 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:37:18.124875 Generating TFRecord Data: [===========================================>-----------------] 71.7% 481 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:37:18.308985 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:37:19.128560 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:37:21.147541 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:37:21.328280 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:37:22.079826 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:37:24.714029 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:37:24.974063 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:37:25.472628 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:37:25.836102 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:37:27.356444 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:37:28.936371 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:37:29.631924 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:37:29.672483 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:37:31.018255 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:37:31.583695 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:37:31.660415 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:37:32.141001 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:37:33.645574 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:37:36.009992 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:37:36.236802 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c026: [INFO] 2023-08-02T13:37:37.564209 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:37:37.746069 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:37:38.122883 Generating TFRecord Data: [==============================================>--------------] 76.5% 513 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:37:40.427737 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:37:41.510158 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:37:41.813704 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c021: [INFO] 2023-08-02T13:37:43.554723 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:37:44.950135 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:37:47.496435 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:37:48.112930 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:37:48.776403 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:37:48.828946 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:37:49.370596 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:37:49.742077 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:37:50.396255 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:37:52.682245 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c031: [INFO] 2023-08-02T13:37:53.091709 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c028: [INFO] 2023-08-02T13:37:53.105467 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:37:53.299811 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:37:57.927879 Generating TFRecord Data: [=================================================>-----------] 81.2% 545 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:37:59.541051 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:37:59.936201 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:38:00.131518 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:38:01.228455 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:38:01.461889 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c020: [INFO] 2023-08-02T13:38:03.042264 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c023: [INFO] 2023-08-02T13:38:03.468011 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c019: [INFO] 2023-08-02T13:38:05.382585 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:38:06.172102 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:38:07.064388 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c032: [INFO] 2023-08-02T13:38:08.245197 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:38:12.941056 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:38:13.551421 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:38:13.573517 Generating TFRecord Data: [====================================================>--------] 86.0% 577 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c017: [INFO] 2023-08-02T13:38:16.926152 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c030: [INFO] 2023-08-02T13:38:17.780316 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:38:18.434125 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c029: [INFO] 2023-08-02T13:38:19.961126 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 2023-08-02T13:38:20.504877 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c025: [INFO] 2023-08-02T13:38:29.178898 Generating TFRecord Data: [======================================================>------] 90.8% 609 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c018: [INFO] 2023-08-02T13:38:30.150718 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c027: [INFO] 2023-08-02T13:38:30.842166 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c022: [INFO] 2023-08-02T13:38:37.823378 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c022: [INFO] 
+c032: [INFO] 2023-08-02T13:38:40.241764 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c032: [INFO] 
+c031: [INFO] 2023-08-02T13:38:42.838022 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c024: [INFO] 2023-08-02T13:38:43.451839 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c031: [INFO] 
+c019: [INFO] 2023-08-02T13:38:44.528533 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c025: [INFO] 2023-08-02T13:38:45.007966 Generating TFRecord Data: [=========================================================>---] 95.5% 641 of 671  [/root/storage-v0.5/dlio_benchmark/src/utils/utility.py:85]
+c024: [INFO] 
+c023: [INFO] 2023-08-02T13:38:45.331969 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c019: [INFO] 
+c023: [INFO] 
+c028: [INFO] 2023-08-02T13:38:47.653517 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c028: [INFO] 
+c030: [INFO] 2023-08-02T13:38:50.241583 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c021: [INFO] 2023-08-02T13:38:50.851617 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c030: [INFO] 
+c021: [INFO] 
+c017: [INFO] 2023-08-02T13:38:52.767098 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c029: [INFO] 2023-08-02T13:38:52.868947 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c026: [INFO] 2023-08-02T13:38:53.739058 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c020: [INFO] 2023-08-02T13:38:54.395766 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c017: [INFO] 
+c029: [INFO] 
+c026: [INFO] 
+c025: [INFO] 2023-08-02T13:38:55.681229 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c020: [INFO] 
+clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  0/16             clush:  1/16             clush:  1/16             clush:  2/16             clush:  2/16             clush:  2/16             clush:  3/16             clush:  3/16             clush:  3/16             clush:  4/16             clush:  5/16             clush:  6/16             clush:  6/16             clush:  7/16             clush:  7/16             clush:  7/16             clush:  8/16             clush:  9/16             clush:  9/16             clush:  9/16             clush:  9/16             clush: 11/16             clush: 12/16             clush: 12/16             clush: 13/16c025: [INFO] 
+c018: [INFO] 2023-08-02T13:38:58.311341 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c027: [INFO] 2023-08-02T13:38:59.275007 Generation done [/root/storage-v0.5/dlio_benchmark/src/dlio_benchmark.py:166]
+c018: [INFO] 
+c027: [INFO] 
+             clush: 14/16             clush: 14/16             clush: 14/16             clush: 15/16             clush: 16/16+ clush -abS 'du -hc /lustre/ai400x2/client/datagen_bert_${HOSTNAME}'
+---------------
+c017
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c017/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c017/valid
+464G	/lustre/ai400x2/client/datagen_bert_c017
+464G	total
+---------------
+c018
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c018/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c018/valid
+464G	/lustre/ai400x2/client/datagen_bert_c018
+464G	total
+---------------
+c019
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c019/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c019/valid
+464G	/lustre/ai400x2/client/datagen_bert_c019
+464G	total
+---------------
+c020
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c020/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c020/valid
+464G	/lustre/ai400x2/client/datagen_bert_c020
+464G	total
+---------------
+c021
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c021/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c021/valid
+464G	/lustre/ai400x2/client/datagen_bert_c021
+464G	total
+---------------
+c022
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c022/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c022/valid
+464G	/lustre/ai400x2/client/datagen_bert_c022
+464G	total
+---------------
+c023
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c023/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c023/valid
+464G	/lustre/ai400x2/client/datagen_bert_c023
+464G	total
+---------------
+c024
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c024/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c024/valid
+464G	/lustre/ai400x2/client/datagen_bert_c024
+464G	total
+---------------
+c025
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c025/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c025/valid
+464G	/lustre/ai400x2/client/datagen_bert_c025
+464G	total
+---------------
+c026
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c026/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c026/valid
+464G	/lustre/ai400x2/client/datagen_bert_c026
+464G	total
+---------------
+c027
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c027/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c027/valid
+464G	/lustre/ai400x2/client/datagen_bert_c027
+464G	total
+---------------
+c028
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c028/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c028/valid
+464G	/lustre/ai400x2/client/datagen_bert_c028
+464G	total
+---------------
+c029
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c029/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c029/valid
+464G	/lustre/ai400x2/client/datagen_bert_c029
+464G	total
+---------------
+c030
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c030/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c030/valid
+464G	/lustre/ai400x2/client/datagen_bert_c030
+464G	total
+---------------
+c031
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c031/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c031/valid
+464G	/lustre/ai400x2/client/datagen_bert_c031
+464G	total
+---------------
+c032
+---------------
+464G	/lustre/ai400x2/client/datagen_bert_c032/train
+4.0K	/lustre/ai400x2/client/datagen_bert_c032/valid
+464G	/lustre/ai400x2/client/datagen_bert_c032
+464G	total
++ clush -abS 'find /lustre/ai400x2/client/datagen_bert_${HOSTNAME} -type f |wc -l'
+---------------
+c[017-032] (16)
+---------------
+671

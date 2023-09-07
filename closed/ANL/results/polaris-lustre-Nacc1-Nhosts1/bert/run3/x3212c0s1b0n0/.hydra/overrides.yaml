@@ -1,0 +1,3 @@
+- workload=bert
+- ++workload.dataset.data_folder=.//data/bert_1x1/2023-08-04-11-46-30/x3212c0s1b0n0
+- ++workload.dataset.num_files_train=219

@@ -1,0 +1,6 @@
+++ clush -aS hostname
+++ wc -l
++ export nbnodes=16
++ nbnodes=16
++ echo 'Number of nodes: 16'
+Number of nodes: 16

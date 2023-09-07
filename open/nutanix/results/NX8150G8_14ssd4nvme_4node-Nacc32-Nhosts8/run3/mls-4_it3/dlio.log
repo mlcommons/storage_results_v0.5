@@ -1,0 +1,2 @@
+[INFO] 2023-07-29T02:47:46.741369 Running DLIO with 4 process(es) [/home/nutanix/storage/dlio_benchmark/src/dlio_benchmark.py:104]
+[INFO] 2023-07-29T02:47:46.741571 Reading workload YAML config file '/home/nutanix/storage/storage-conf/workload/unet3d.yaml' [/home/nutanix/storage/dlio_benchmark/src/dlio_benchmark.py:106]

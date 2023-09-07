@@ -1,0 +1,15 @@
++ mount -t lustre
++ grep .
+172.16.240.80@o2ib,172.16.241.80@o2ib:172.16.240.81@o2ib,172.16.241.81@o2ib:/ai400x2 on /lustre/ai400x2/client type lustre (rw,flock,lazystatfs,encrypt)
+++ mount -t lustre
+++ head -n 1
+++ awk '{print $3}'
++ export exafs=/lustre/ai400x2/client
++ exafs=/lustre/ai400x2/client
+++ mount -t lustre
+++ head -n 1
+++ grep -E -o '^([0-9]+\.){3}[0-9]+'
++ export exafsip=172.16.240.80
++ exafsip=172.16.240.80
++ echo 'EXAFS: /lustre/ai400x2/client'
+EXAFS: /lustre/ai400x2/client

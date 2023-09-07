@@ -1,0 +1,56 @@
+{
+    "overall": {
+        "model": "unet3d",
+        "num_client_hosts": 1,
+        "num_benchmark_runs": 5,
+        "train_num_accelerators": "1",
+        "num_files_train": 3588,
+        "num_samples_per_file": 1,
+        "train_throughput_mean_samples_per_second": 2.9304399581446603,
+        "train_throughput_stdev_samples_per_second": 6.240865144414134e-05,
+        "train_throughput_mean_MB_per_second": 409.7026235392579,
+        "train_throughput_stdev_MB_per_second": 0.008725306982369816
+    },
+    "runs": {
+        "run-4": {
+            "train_throughput_samples_per_second": 2.9304793795709805,
+            "train_throughput_MB_per_second": 409.7081350194512,
+            "train_num_accelerators": "1",
+            "model": "unet3d",
+            "num_files_train": 3588,
+            "num_samples_per_file": 1
+        },
+        "run-1": {
+            "train_throughput_samples_per_second": 2.9303758982632475,
+            "train_throughput_MB_per_second": 409.69366737504595,
+            "train_num_accelerators": "1",
+            "model": "unet3d",
+            "num_files_train": 3588,
+            "num_samples_per_file": 1
+        },
+        "run-2": {
+            "train_throughput_samples_per_second": 2.93035333966359,
+            "train_throughput_MB_per_second": 409.6905134740635,
+            "train_num_accelerators": "1",
+            "model": "unet3d",
+            "num_files_train": 3588,
+            "num_samples_per_file": 1
+        },
+        "run-3": {
+            "train_throughput_samples_per_second": 2.930487691442368,
+            "train_throughput_MB_per_second": 409.70929709598676,
+            "train_num_accelerators": "1",
+            "model": "unet3d",
+            "num_files_train": 3588,
+            "num_samples_per_file": 1
+        },
+        "run-5": {
+            "train_throughput_samples_per_second": 2.930503481783116,
+            "train_throughput_MB_per_second": 409.71150473174225,
+            "train_num_accelerators": "1",
+            "model": "unet3d",
+            "num_files_train": 3588,
+            "num_samples_per_file": 1
+        }
+    }
+}

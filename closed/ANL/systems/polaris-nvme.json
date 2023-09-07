@@ -1,0 +1,38 @@
+"host_node": {
+    "node_count": 560,
+    "OS_version": "SUSE Linux Enterprise Server 15 SP3",
+    "memory_capacity_gigabytes": 512, // we used cgroup to limit the hostnode memory to be 32GB
+    "cpu_core_count": 32, 
+    "cpu_socket_count": 1, 
+    "cpu_frequency_gigahertz": 1.794,
+    "cpu_model": "AMD EPYC 7543P 32-Core Processor"
+},
+
+"storage_system": {
+    "category": "commerical", 
+    "software_specification": "Lustre 2.12.6.2_cray_8_gcb695d2_dirty",
+    "type": "Node local SSD", // see hardware for details
+    "total_read_bandwidth_sequential_GB_per_sec": 3.3, // per SSD drive
+    "num_disks_per_node": 2,
+    "total_write_bandwidth_sequential_GB_per_sec": 3.3, // per SSD drive
+    "total_storage_capacity_TB": 1.6 // per SSD drive
+},  
+
+"hardware": [
+{
+    "Count": 2, // per node
+    "Vendor": "Samsung",
+    "type": "SSD",
+    "Model": "PM1725a", 
+    "protocol": "NVMe",
+    "Disk_capacity_gigabytes": 1600,
+},
+],
+
+"host_to_storage_interconnect": [
+    {
+	"interconnect_type": "PCIe",
+	"link_speed_gigabits_per_second": 'N/A',
+        "rdma_enabled": yes, 
+    },
+]

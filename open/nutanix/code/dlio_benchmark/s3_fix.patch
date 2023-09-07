@@ -1,0 +1,251 @@
+diff --git a/src/data_generator/npz_generator.py b/src/data_generator/npz_generator.py
+index 5b56567..d0cef61 100644
+--- a/src/data_generator/npz_generator.py
++++ b/src/data_generator/npz_generator.py
+@@ -21,13 +21,22 @@ from src.data_generator.data_generator import DataGenerator
+ import logging
+ import numpy as np
+ from numpy import random
+-
++import boto3
++import io
++import os
+ from src.utils.utility import progress, utcnow
+ from shutil import copyfile
+ 
+ """
+ Generator for creating data in NPZ format.
+ """
++s3 = boto3.resource("s3",
++    aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
++    aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY"),
++    endpoint_url=os.environ.get("S3_ENDPOINT"),
++    region_name=os.environ.get("AWS_REGION")
++)
++
+ class NPZGenerator(DataGenerator):
+     def __init__(self):
+         super().__init__()
+@@ -39,6 +48,7 @@ class NPZGenerator(DataGenerator):
+         super().generate()
+         random.seed(10)
+         record_labels = [0] * self.num_samples
++        s3_bucket = self._args.storage_root
+         for i in range(self.my_rank, int(self.total_files_to_generate), self.comm_size):
+             if (self._dimension_stdev>0):
+                 dim1, dim2 = [max(int(d), 0) for d in random.normal( self._dimension, self._dimension_stdev, 2)]
+@@ -48,8 +58,13 @@ class NPZGenerator(DataGenerator):
+             out_path_spec = self.storage.get_uri(self._file_list[i])
+             progress(i+1, self.total_files_to_generate, "Generating NPZ Data")
+             prev_out_spec = out_path_spec
++            bytes_io = io.BytesIO()
+             if self.compression != Compression.ZIP:
+-                np.savez(out_path_spec, x=records, y=record_labels)
++                np.savez(bytes_io, x=records, y=record_labels)
++                bytes_io.seek(0)
++                s3.Bucket(s3_bucket).upload_fileobj(bytes_io, self._file_list[i])
+             else:
+-                np.savez_compressed(out_path_spec, x=records, y=record_labels)
++                np.savez_compressed(bytes_io, x=records, y=record_labels)
++                bytes_io.seek(0)
++                s3.Bucket(s3_bucket).upload_fileobj(bytes_io, self._file_list[i])
+         random.seed()
+diff --git a/src/framework/torch_framework.py b/src/framework/torch_framework.py
+index db8ccbd..810d86d 100644
+--- a/src/framework/torch_framework.py
++++ b/src/framework/torch_framework.py
+@@ -83,15 +83,13 @@ class TorchFramework(Framework):
+             """
+             Performs Checkpointing for a specific step number. It writes different file of different sizes.
+             """
+-            if not os.path.exists(self.checkpoint_folder):
+-                os.makedirs(self.checkpoint_folder)
++            if not self.storage.get_node(self.checkpoint_folder):
++                self.storage.create_node(self.checkpoint_folder)
+             my_rank = self.rank()
+             model_file = os.path.join(self.checkpoint_folder, f"model-{epoch}-{step_number}.bin")
+ 
+-            f = open(model_file, "w")
+             string_val = "x" * self.args.model_size 
+-            f.write(string_val)
+-            f.close()
++            self.storage.put_data(model_file, string_val)
+     def compute(self, epoch_number, step, computation_time):
+         torch_sleep(computation_time)
+ 
+diff --git a/src/reader/torch_data_loader_reader.py b/src/reader/torch_data_loader_reader.py
+index 504aa7a..eeff8b2 100644
+--- a/src/reader/torch_data_loader_reader.py
++++ b/src/reader/torch_data_loader_reader.py
+@@ -19,7 +19,8 @@ import logging
+ import numpy as np
+ from time import time
+ import os
+-
++import boto3
++import io
+ from src.utils.utility import utcnow, timeit
+ 
+ from torch.utils.data import Dataset, DataLoader
+@@ -33,24 +34,36 @@ import torchvision.transforms as transforms
+ import h5py
+ 
+ totensor=transforms.ToTensor()
++s3 = boto3.resource("s3",
++    aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
++    aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY"),
++    endpoint_url=os.environ.get("S3_ENDPOINT"),
++    region_name=os.environ.get("AWS_REGION")
++)
+ 
+ ### reading file of different formats.  resize is simple to keep the data uniform
+-def read_jpeg(filename):
++def read_jpeg(filename, storage):
+     return totensor(Image.open(filename).resize((224, 224)))
+-def read_png(filename):
++def read_png(filename, storage):
+     return totensor(Image.open(filename).resize((224, 224)))
+-def read_npz(filename):
+-    data = np.load(filename)
++def read_npz(filename, storage):
++    s3_bucket = storage.get_namespace()
++    prefix=f"s3://{s3_bucket}/"
++    filename = filename[len(prefix):]
++    buf = io.BytesIO()
++    s3.Bucket(s3_bucket).download_fileobj(filename, buf)
++    buf.seek(0)
++    data = np.load(buf)
+     x = data['x']
+-    y = data['y'] 
++    y = data['y']
+     x.resize((224, 224), refcheck=False)
+     return x, y
+-def read_hdf5(f):
++def read_hdf5(f, storage):
+     file_h5 = h5py.File(f, 'r')
+     d = file_h5['records'][:,:,:]
+     l = file_h5['labels'][:]
+     return d, l
+-def read_file(f):
++def read_file(f, storage):
+     with open(f, mode='rb') as file: # b is important -> binary
+         return file.read()
+ 
+@@ -66,9 +79,10 @@ class TorchDataset(Dataset):
+         Currently, we only support loading one sample per file 
+         TODO: support multiple samples per file
+         """
+-        def __init__(self, samples, rank, format):
++        def __init__(self, samples, rank, format, storage):
+             self.samples = samples
+             self.my_rank = rank
++            self.storage = storage
+             try:
+                 self.read = filereader[format]
+             except:
+@@ -81,7 +95,7 @@ class TorchDataset(Dataset):
+         @timeit
+         def __getitem__(self, idx):
+             logging.debug(f"{utcnow()} Rank {self.my_rank} reading {self.samples[idx]}")
+-            return self.read(self.samples[idx])
++            return self.read(self.samples[idx], self.storage)
+ 
+ class TorchDataLoaderReader(FormatReader):
+     """
+@@ -99,7 +113,7 @@ class TorchDataLoaderReader(FormatReader):
+         super().read(epoch_number)
+         do_shuffle = True if self.sample_shuffle != Shuffle.OFF else False
+         if self._args.num_samples_per_file == 1:
+-            dataset = TorchDataset(self._file_list, self.my_rank, self.format)
++            dataset = TorchDataset(self._file_list, self.my_rank, self.format, self.storage)
+         else:
+             raise Exception(f"Multiple sample per file is currently unsupported in PyTorch reader")
+         # TODO: In image segmentation, the distributed sampler is not used during eval, we could parametrize this away if needed
+diff --git a/src/storage/s3_storage.py b/src/storage/s3_storage.py
+index 7fbe8d5..3f66964 100644
+--- a/src/storage/s3_storage.py
++++ b/src/storage/s3_storage.py
+@@ -1,6 +1,22 @@
+ from src.storage.storage_handler import DataStorage, Namespace
+ from src.common.enumerations import NamespaceType, MetadataType
+ import os
++import io
++import boto3
++
++s3 = boto3.resource("s3",
++    aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
++    aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY"),
++    endpoint_url=os.environ.get("S3_ENDPOINT"),
++    region_name=os.environ.get("AWS_REGION")
++)
++
++s3_client = boto3.client("s3",
++    aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
++    aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY"),
++    endpoint_url=os.environ.get("S3_ENDPOINT"),
++    region_name=os.environ.get("AWS_REGION")
++)
+ 
+ class S3Storage(DataStorage):
+     """
+@@ -17,25 +33,51 @@ class S3Storage(DataStorage):
+         return True
+ 
+     def get_namespace(self):
+-        return self.get_node(self.namespace.name)
++        return self.namespace.name
+ 
+     def create_node(self, id, exist_ok=False):
+-        return super().create_node(self.get_uri(id), exist_ok)
++        return True
+ 
+     def get_node(self, id=""):
+-        return super().get_node(self.get_uri(id))
++        try:
++            response = s3_client.head_object(Bucket=self.namespace.name, Key=id)
++            return MetadataType.FILE
++
++        except:
++            response = s3_client.list_objects_v2(Bucket=self.namespace.name, Prefix=id, Delimiter='/')
++
++            if "Contents" in response or "CommonPrefixes" in response:
++                return MetadataType.DIRECTORY
++            else:
++                return None
+ 
+     def walk_node(self, id, use_pattern=False):
+-        return super().walk_node(self.get_uri(id), use_pattern)
++        results=[]
++        if use_pattern:
++            bucket = s3.Bucket(self.namespace.name)
++            pat = re.compile(id)
++            for object in bucket.objects.all():
++                m = re.search(pat, object.key)
++                if m is not None:
++                    results.append(self.get_basename(object.key))
++        else:
++            bucket = s3.Bucket(self.namespace.name)
++            for object in bucket.objects.all():
++                results.append(self.get_basename(object.key))
++        return results
++
+ 
+     def delete_node(self, id):
+-        return super().delete_node(self.get_uri(id))
++        bucket = s3.Bucket(self.namespace.name)
++        bucket.objects.filter(Prefix=id).delete()
++        return True
+ 
+     def put_data(self, id, data, offset=None, length=None):
+-        return super().put_data(self.get_uri(id), data, offset, length)
++        s3_client.put_object(Body=data, Bucket=self.namespace.name, Key=id)
+ 
+     def get_data(self, id, data, offset=None, length=None):
+-        return super().get_data(self.get_uri(id), data, offset, length)
++        obj=s3_client.get_object(Bucket=self.namespace.name, Key=id)
++        return obj["Body"].read()
+ 
+     def get_basename(self, id):
+-        return os.path.basename(id)
+\ No newline at end of file
++        return os.path.basename(id)

@@ -1,0 +1,3 @@
+++ date +%s
++ clush -abS 'cd /root/storage-v0.5/ && if [ -d results ] ; then mv results results_1690947933 ; fi'
++ clush -abS 'cd /root/storage-v0.5/ && mkdir -p results'

@@ -1,0 +1,47 @@
+"host_node": {
+  "node_count": // 1
+  "OS_version": //CentOS 7.9.2009
+  "memory_capacity_gigabytes": //196
+  "cpu_core_count": // 12
+  "cpu_socket_count": // 2
+  "Hyperthread": //Enabled
+  "cpu_frequency_gigahertz": // 2.6
+  "cpu_model": // Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
+  "Physical" // Yes 
+},
+
+"storage_system": {
+  “category”: // commercial
+  “software_specification”: //Weka 4.1.0.71
+  “type”: //Weka
+  “total_read_bandwidth_sequential_GB_per_sec”: //157.5
+  “total_write_bandwidth_sequential_GB_per_sec”: //56.3
+  “total_storage_capacity_TB”: // 54.41483
+  "stripe size": // 5+2
+
+  "hardware": [
+    {
+    "Count": //7
+    “Vendor”: //Supermicro
+    "Type": //SSD
+    “Model”: //2 SYS-220BT-HNTR 4 nodes chassis - out of which 1 was not part of the system - totaling in 4+3=7 nodes 
+    "Storage Nodes CPU": //Intel(R) Xeon(R) Gold 6126 CPU @ 2.60GHz
+    "Storage nodes memory": // 196GB
+    “protocol”: //NVMe
+    "Num_drives": //6
+    "Drive_size_gigabytes": //1913
+    "Disk_capacity_gigabytes": //11478
+    },
+  ],
+
+  //other system-specific optional fields (free-form).
+},
+
+"host_to_storage_interconnect": [
+{
+  “interconnect_type”: //Ethernet
+  "model": //Mlx sn2700
+  "link_speed_gigabits_per_second": //100	
+  "rdma_enabled": //no
+},]
+

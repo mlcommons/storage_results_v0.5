@@ -1,0 +1,34 @@
+{
+    "model": "unet3d",
+    "start": "2023-08-03T16:27:37.096033",
+    "num_accelerators": 8,
+    "hostname": "x3001c0s1b0n0",
+    "metric": {
+        "train_au_percentage": [
+            99.52852557403531,
+            99.71908275128492,
+            99.71386748733255,
+            99.71437542498857,
+            99.70985451140695
+        ],
+        "train_au_mean_percentage": 99.67714114980967,
+        "train_au_meet_expectation": "success",
+        "train_au_stdev_percentage": 0.07436540383805997,
+        "train_throughput_samples_per_second": [
+            22.992723168673812,
+            23.059813236788898,
+            22.99103454897078,
+            23.0666447793922,
+            23.047779648710986
+        ],
+        "train_throughput_mean_samples_per_second": 23.031599076507337,
+        "train_throughput_stdev_samples_per_second": 0.032993539222307855,
+        "train_io_mean_MB_per_second": 3220.030678234287,
+        "train_io_stdev_MB_per_second": 4.612802095349276
+    },
+    "num_files_train": 3200,
+    "num_files_eval": 0,
+    "num_samples_per_file": 1,
+    "epochs": 5,
+    "end": "2023-08-03T16:39:14.371886"
+}

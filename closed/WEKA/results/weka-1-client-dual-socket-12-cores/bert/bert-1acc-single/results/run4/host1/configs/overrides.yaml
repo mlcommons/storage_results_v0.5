@@ -1,0 +1,7 @@
+- workload=bert
+- ++workload.workflow.generate_data=False
+- ++workload.workflow.train=True
+- ++workload.dataset.num_files_train=1753
+- ++workload.dataset.data_folder=/mnt/weka1/MLPerf/bert_data
+- ++workload.workflow.profiling=False
+- ++workload.profiling.profiler=none

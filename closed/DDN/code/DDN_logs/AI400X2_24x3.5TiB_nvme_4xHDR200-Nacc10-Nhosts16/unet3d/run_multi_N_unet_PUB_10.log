@@ -1,0 +1,117 @@
++ ./multi_host_closed_N_unet_PUB.sh
++ set -o pipefail
++ export nb_accelerator=10
++ nb_accelerator=10
++ export nb_reader_threads=4
++ nb_reader_threads=4
++ export OMPI_MCA_rmaps_base_oversubscribe=true
++ OMPI_MCA_rmaps_base_oversubscribe=true
++ export OMPI_ALLOW_RUN_AS_ROOT=1
++ OMPI_ALLOW_RUN_AS_ROOT=1
++ export OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
++ OMPI_ALLOW_RUN_AS_ROOT_CONFIRM=1
++ create_log_dir
+++ date +%s
++ export LOGDIR=logs_1691000281
++ LOGDIR=logs_1691000281
++ mkdir -p logs_1691000281/cmds
++ cp ./multi_host_closed_N_unet_PUB.sh logs_1691000281/run.sh
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo check_number_of_nodes
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:18: Check number of nodes  '
+08/02/2023 12:18: Check number of nodes                     + check_number_of_nodes
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo umount_mount_on_all_nodes
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:18: Umount mount on all nodes  '
+08/02/2023 12:18: Umount mount on all nodes                 + umount_mount_on_all_nodes
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo check_nodes_are_the_same
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Check nodes are the same  '
+08/02/2023 12:20: Check nodes are the same                  + check_nodes_are_the_same
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo find_exa_fs
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Find exa fs  '
+08/02/2023 12:20: Find exa fs                               + find_exa_fs
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo sync_run_directory
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Sync run directory  '
+08/02/2023 12:20: Sync run directory                        + sync_run_directory
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo create_result_dir
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Create result dir  '
+08/02/2023 12:20: Create result dir                         + create_result_dir
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo find_total_mem
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Find total mem  '
+08/02/2023 12:20: Find total mem                            + find_total_mem
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo find_nb_files
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Find nb files  '
+08/02/2023 12:20: Find nb files                             + find_nb_files
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo cleanup_dirs_on_each_node
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Cleanup dirs on each node  '
+08/02/2023 12:20: Cleanup dirs on each node                 + cleanup_dirs_on_each_node
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo create_files_from_each_node
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:20: Create files from each node  '
+08/02/2023 12:20: Create files from each node               + create_files_from_each_node
++ printf '%s\n' $'\342\234\224'
+✔
++ for cmd in check_number_of_nodes umount_mount_on_all_nodes check_nodes_are_the_same find_exa_fs sync_run_directory create_result_dir find_total_mem find_nb_files cleanup_dirs_on_each_node create_files_from_each_node run_unet3d
+++ date '+%m/%d/%Y %H:%M'
+++ echo run_unet3d
+++ sed 's@_@ @g'
+++ sed -E 's@(^.)@\u\1@g'
++ printf %-60s '08/02/2023 12:27: Run unet3d  '
+08/02/2023 12:27: Run unet3d                                + run_unet3d
++ printf '%s\n' $'\342\234\224'
+✔

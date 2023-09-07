@@ -1,0 +1,3 @@
+- workload=bert
+- ++workload.dataset.data_folder=/local/scratch//data/bert_8x1/2023-08-02-15-34-25/x3211c0s7b1n0
+- ++workload.dataset.num_files_train=219

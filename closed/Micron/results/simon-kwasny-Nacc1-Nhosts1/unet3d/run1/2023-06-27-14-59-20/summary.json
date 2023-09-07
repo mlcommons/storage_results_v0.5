@@ -1,0 +1,34 @@
+{
+    "model": "unet3d",
+    "start": "2023-06-27T14:59:21.615508",
+    "num_accelerators": 1,
+    "hostname": "simon-kwasny.micron.com",
+    "metric": {
+        "train_au_percentage": [
+            99.73961127248265,
+            99.74003039390337,
+            99.7395895203401,
+            99.73998577261372,
+            99.73846947648302
+        ],
+        "train_au_mean_percentage": 99.73953728716458,
+        "train_au_meet_expectation": "success",
+        "train_au_stdev_percentage": 0.0005643961795584368,
+        "train_throughput_samples_per_second": [
+            2.930414279476981,
+            2.9308780546031428,
+            2.9308132755024903,
+            2.9306733724418543,
+            2.9302610108909035
+        ],
+        "train_throughput_mean_samples_per_second": 2.9306079985830746,
+        "train_throughput_stdev_samples_per_second": 0.0002354867977681672,
+        "train_io_mean_MB_per_second": 409.7261171475428,
+        "train_io_stdev_MB_per_second": 0.03292323345043403
+    },
+    "num_files_train": 9375,
+    "num_files_eval": 0,
+    "num_samples_per_file": 1,
+    "epochs": 5,
+    "end": "2023-06-27T19:25:52.068330"
+}

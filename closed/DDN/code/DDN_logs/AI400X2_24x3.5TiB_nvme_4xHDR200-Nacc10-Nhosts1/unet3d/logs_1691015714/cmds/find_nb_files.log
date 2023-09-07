@@ -1,0 +1,6 @@
+++ ./benchmark.sh datasize --workload unet3d --num-accelerators 10 --host-memory-in-gb 98
+++ grep -E -o '=[0-9]+'
+++ sed s@=@@g
+++ awk '{print int($1)}'
++ export num_files=4000
++ num_files=4000

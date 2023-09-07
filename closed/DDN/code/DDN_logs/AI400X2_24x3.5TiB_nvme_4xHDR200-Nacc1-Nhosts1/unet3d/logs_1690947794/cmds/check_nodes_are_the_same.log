@@ -1,0 +1,35 @@
++ clush -abS 'lscpu |grep -i sock'
+---------------
+c[017-032] (16)
+---------------
+Core(s) per socket:  20
+Socket(s):           1
++ clush -abS 'lscpu |grep -i intel'
+---------------
+c[017-032] (16)
+---------------
+Vendor ID:           GenuineIntel
+BIOS Vendor ID:      Intel(R) Corporation
+Model name:          Intel(R) Xeon(R) Gold 6138 CPU @ 2.00GHz
+BIOS Model name:     Intel(R) Xeon(R) Gold 6138 CPU @ 2.00GHz
+Flags:               fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx pdpe1gb rdtscp lm constant_tsc art arch_perfmon pebs bts rep_good nopl xtopology nonstop_tsc cpuid aperfmperf pni pclmulqdq dtes64 monitor ds_cpl smx est tm2 ssse3 sdbg fma cx16 xtpr pdcm pcid dca sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand lahf_lm abm 3dnowprefetch cpuid_fault epb cat_l3 cdp_l3 invpcid_single pti intel_ppin ssbd mba ibrs ibpb stibp fsgsbase tsc_adjust bmi1 hle avx2 smep bmi2 erms invpcid rtm cqm mpx rdt_a avx512f avx512dq rdseed adx smap clflushopt clwb intel_pt avx512cd avx512bw avx512vl xsaveopt xsavec xgetbv1 xsaves cqm_llc cqm_occup_llc cqm_mbm_total cqm_mbm_local dtherm ida arat pln pts hwp hwp_act_window hwp_epp hwp_pkg_req pku ospke md_clear flush_l1d arch_capabilities
++ clush -abS nproc
+---------------
+c[017-032] (16)
+---------------
+20
++ clush -abS 'uname -r'
+---------------
+c[017-032] (16)
+---------------
+4.18.0-425.3.1.el8.x86_64
++ clush -abS 'ibdev2netdev -v|grep ib0'
+---------------
+c[017-032] (16)
+---------------
+0000:b3:00.0 mlx5_0 (MT4123 - MCX653106A-ECAT) ConnectX-6 VPI adapter card, 100Gb/s (HDR100, EDR IB and 100GbE), dual-port QSFP56                                                                                                     fw 20.36.1010 port 1 (ACTIVE) ==> ib0 (Up)
++ clush -abS 'lctl get_param version'
+---------------
+c[017-032] (16)
+---------------
+version=2.14.0_ddn85

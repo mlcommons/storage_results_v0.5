@@ -1,0 +1,12 @@
+- workload=bert
+- ++workload.workflow.generate_data=False
+- ++workload.workflow.train=True
+- ++workload.dataset.num_files_train=671
+- ++workload.dataset.data_folder=/lustre/ai400x2/client/datagen_bert_c027
+- ++workload.storage.storage_type=local_fs
+- ++workload.storage.storage_root=/lustre/ai400x2/client
+- ++workload.reader.read_threads=4
+- ++workload.reader.computation_threads=8
+- ++workload.checkpoint.checkpoint_folder=/lustre/ai400x2/client/checkpoint_bert_c027
+- ++workload.workflow.profiling=False
+- ++workload.profiling.profiler=none

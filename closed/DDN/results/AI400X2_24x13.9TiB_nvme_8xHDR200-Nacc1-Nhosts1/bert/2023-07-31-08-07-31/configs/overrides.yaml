@@ -1,0 +1,9 @@
+- workload=bert
+- ++workload.workflow.generate_data=True
+- ++workload.workflow.train=False
+- ++workload.dataset.num_files_train=239
+- ++workload.dataset.data_folder=/lustre/ai400x2/client/datagen_bert
+- ++workload.storage.storage_type=local_fs
+- ++workload.storage.storage_root=/lustre/ai400x2/client
+- ++workload.workflow.profiling=False
+- ++workload.profiling.profiler=none

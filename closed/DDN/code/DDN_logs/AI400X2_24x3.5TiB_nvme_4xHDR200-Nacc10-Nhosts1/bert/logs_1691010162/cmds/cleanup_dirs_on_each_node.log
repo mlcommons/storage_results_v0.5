@@ -1,0 +1,2 @@
++ clush -abS 'rm -rf /lustre/ai400x2/client/datagen_bert_${HOSTNAME}'
+clush:  0/16clush:  7/16clush: 15/16             clush: 16/16+ clush -abS 'rm -rf /lustre/ai400x2/client/checkpoint_bert_${HOSTNAME}'

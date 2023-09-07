@@ -1,0 +1,40 @@
+++ clush -aS hostname
+++ awk '{print $2}'
+++ grep -v c017
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c028 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c022 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c025 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c020 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c031 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c026 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c023 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c029 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c032 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c018 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c030 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c021 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c027 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c024 '[ -d /root/storage-v0.5 ]'
++ for node in $(clush -aS hostname|awk '{print $2}'|grep -v $HOSTNAME)
++ clush -S -w c019 '[ -d /root/storage-v0.5 ]'
++ clush -abcS /root/storage-v0.5/benchmark.sh /root/storage-v0.5/mount_all.sh /root/storage-v0.5/multi_host_closed_1node_1accelerator_bert_PUB.sh /root/storage-v0.5/multi_host_closed_1node_1accelerator_unet_PUB.sh /root/storage-v0.5/multi_host_closed_1node_Naccelerator_bert_PUB.sh /root/storage-v0.5/multi_host_closed_1node_Naccelerator_unet_PUB.sh /root/storage-v0.5/multi_host_closed_N_bert_PUB.sh /root/storage-v0.5/multi_host_closed_N_unet_PUB.sh /root/storage-v0.5/multi_host_launcher.sh /root/storage-v0.5/prep.sh /root/storage-v0.5/run_all.sh /root/storage-v0.5/single_host_closed_1_bert_PUB.sh /root/storage-v0.5/single_host_closed_1_unet_PUB.sh /root/storage-v0.5/single_host_closed_N_bert_PUB.sh /root/storage-v0.5/single_host_closed_N_unet_PUB.sh
++ clush -abS 'cd /root/storage-v0.5 && git rev-parse HEAD|grep '\''aca225d435f42bb5e788a45dc14e27b8d650710d'\'''
+---------------
+c[017-032] (16)
+---------------
+aca225d435f42bb5e788a45dc14e27b8d650710d
++ clush -abS 'cd /root/storage-v0.5 && if git diff |grep '\''.'\'' ; then exit 1 ; fi'

@@ -1,0 +1,31 @@
+workload:
+  model: bert
+  framework: tensorflow
+  workflow:
+    generate_data: false
+    train: true
+    debug: false
+    checkpoint: true
+  dataset:
+    data_folder: .//data/bert_8x128/2023-08-03-01-51-44/x3006c0s7b1n0
+    format: tfrecord
+    num_files_train: 219
+    num_samples_per_file: 313532
+    record_length: 2500
+    file_prefix: part
+  train:
+    seed_change_epoch: false
+    computation_time: 0.968
+    total_training_steps: 1000
+  reader:
+    data_loader: tensorflow
+    read_threads: 1
+    computation_threads: 1
+    transfer_size: 262144
+    batch_size: 48
+    file_shuffle: seed
+    sample_shuffle: seed
+  checkpoint:
+    checkpoint_folder: checkpoints/bert
+    steps_between_checkpoints: 250
+    model_size: 4034713312

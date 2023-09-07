@@ -1,0 +1,26 @@
+"host_node": {
+    "node_count": 560,
+    "OS_version": "SUSE Linux Enterprise Server 15 SP3",
+    "memory_capacity_gigabytes": 512, // we used cgroup to limit the hostnode memory to be 32GB
+    "cpu_core_count": 32, 
+    "cpu_socket_count": 1, 
+    "cpu_frequency_gigahertz": 1.794,
+    "cpu_model": "AMD EPYC 7543P 32-Core Processor"
+},
+
+"storage_system": {
+    "category": 'commercial', 
+    "software_specification": "Lustre 2.12.6.2_cray_8_gcb695d2_dirty",
+    "type": "Lustre", 
+    "total_read_bandwidth_sequential_GB_per_sec": 650, 
+    "total_write_bandwidth_sequential_GB_per_sec": 650, 
+    "total_storage_capacity_TB": 1000000
+},  
+"host_to_storage_interconnect": [
+    {
+	"interconnect_type": "HPE Slingshot 11",
+	"model": "HPC Slingshot 11",
+	"link_speed_gigabits_per_second": 200,
+        "rdma_enabled": yes, 
+    },
+]

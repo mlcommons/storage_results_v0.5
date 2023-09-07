@@ -1,0 +1,47 @@
+{
+  "host_name": "simon-kwasny",
+  "accelerator_count": 1,
+  "hosts_count": 1,
+
+  "host_node": {
+    "node_count": 1,
+    "OS_version": "AlmaLinux 9.0",
+    "kernel_version": 5.14.0-70.30.1.el9_0.x86_64,
+    "memory_capacity_gigabytes": "256 GB",
+    "cpu_core_count": 24,
+    "cpu_socket_count": 1,
+    "cpu_frequency_gigahertz": 4,
+    "cpu_model": "AMD EPYC 74F3 24-Core Processor",
+    "system": "Supermicro AS-1114S-WN10RT",
+    "bios_version": 2.4
+  },
+
+  "storage_system":
+  {
+    "category": "commercial",
+    "type": "Local",
+    "Model": "Micron 9400 PRO",
+    "total_read_bandwidth_sequential_MB_per_sec": 7000,
+    "total_write_bandwidth_sequential_MB_per_sec": 7000,
+    "total_storage_capacity_TB": "7.68 TB",
+
+    "hardware": [
+    {
+      "Count": 1,
+      "Vendor": "Micron",
+      "type": "NVMe SSD",
+      "Model": "9400 Pro",
+      "protocol": "NVMe",
+      "Disk_capacity": "7.68 TB"
+    }
+  ]
+  },
+
+  "host_to_storage_interconnect": [
+    {
+      "interconnect_type": "PCIe",
+      "PCIe Gen": "Gen4"
+    }
+  ]
+
+}

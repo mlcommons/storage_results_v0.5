@@ -1,0 +1,56 @@
+{
+    "overall": {
+        "model": "bert",
+        "num_client_hosts": 128,
+        "num_benchmark_runs": 5,
+        "train_num_accelerators": "1024",
+        "num_files_train": 219,
+        "num_samples_per_file": 313532,
+        "train_throughput_mean_samples_per_second": 50494.22874290056,
+        "train_throughput_stdev_samples_per_second": 26.17153456996712,
+        "train_throughput_mean_MB_per_second": 120.38762269711629,
+        "train_throughput_stdev_MB_per_second": 0.0623978008507829
+    },
+    "runs": {
+        "run0": {
+            "train_throughput_samples_per_second": 50492.6460952177,
+            "train_throughput_MB_per_second": 120.38384937099863,
+            "train_num_accelerators": "1024",
+            "model": "bert",
+            "num_files_train": 219,
+            "num_samples_per_file": 313532
+        },
+        "run1": {
+            "train_throughput_samples_per_second": 50522.67205903999,
+            "train_throughput_MB_per_second": 120.4554368473053,
+            "train_num_accelerators": "1024",
+            "model": "bert",
+            "num_files_train": 219,
+            "num_samples_per_file": 313532
+        },
+        "run2": {
+            "train_throughput_samples_per_second": 50446.806483800545,
+            "train_throughput_MB_per_second": 120.27455922079218,
+            "train_num_accelerators": "1024",
+            "model": "bert",
+            "num_files_train": 219,
+            "num_samples_per_file": 313532
+        },
+        "run4": {
+            "train_throughput_samples_per_second": 50513.25479233511,
+            "train_throughput_MB_per_second": 120.43298433383728,
+            "train_num_accelerators": "1024",
+            "model": "bert",
+            "num_files_train": 219,
+            "num_samples_per_file": 313532
+        },
+        "run3": {
+            "train_throughput_samples_per_second": 50495.76428410948,
+            "train_throughput_MB_per_second": 120.39128371264809,
+            "train_num_accelerators": "1024",
+            "model": "bert",
+            "num_files_train": 219,
+            "num_samples_per_file": 313532
+        }
+    }
+}

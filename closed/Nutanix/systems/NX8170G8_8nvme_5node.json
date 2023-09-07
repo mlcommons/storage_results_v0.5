@@ -1,0 +1,1364 @@
+{
+  "id": "Nutanix_NFS_Files_NX8170g8_8nvme_5node_unet3d",
+  "targets": {
+    "default": {
+      "id": "92941819-c32b-43a2-b26f-c08267871264",
+      "context.prism.address": "10.57.208.20",
+      "context.prism.username": "admin",
+      "context.prism.cluster": "8170g8-ml",
+      "context.prism.container": "default-container-1155262153028",
+      "context.prism.network": "vlan211",
+      "context.nodes": [
+        {
+          "ipmi": {
+            "address": "",
+            "protocol": "none",
+            "vendor": "generic",
+            "username": ""
+          },
+          "hypervisor_version": "Nutanix 20230302.186",
+          "ipmi_addr": "10.56.62.250",
+          "hypervisor_addr": "10.57.208.39",
+          "prism_name": "f3f74b8d-7021-4ca1-b210-ab2e1ac5922f",
+          "svm_addr": "10.57.208.49",
+          "vcpu_count": 32,
+          "memory_capacity_bytes": 68719476736
+        },
+        {
+          "ipmi": {
+            "address": "",
+            "protocol": "none",
+            "vendor": "generic",
+            "username": ""
+          },
+          "hypervisor_version": "Nutanix 20230302.186",
+          "ipmi_addr": "10.56.62.241",
+          "hypervisor_addr": "10.57.208.11",
+          "prism_name": "ecea1f92-38d4-4fa4-9d23-2b7310f0d71b",
+          "svm_addr": "10.57.208.21",
+          "vcpu_count": 32,
+          "memory_capacity_bytes": 68719476736
+        },
+        {
+          "ipmi": {
+            "address": "",
+            "protocol": "none",
+            "vendor": "generic",
+            "username": ""
+          },
+          "hypervisor_version": "Nutanix 20230302.186",
+          "ipmi_addr": "10.56.62.242",
+          "hypervisor_addr": "10.57.208.12",
+          "prism_name": "443d5356-1b2f-4cb6-b669-66ae783f0fe4",
+          "svm_addr": "10.57.208.22",
+          "vcpu_count": 32,
+          "memory_capacity_bytes": 68719476736
+        },
+        {
+          "ipmi": {
+            "address": "",
+            "protocol": "none",
+            "vendor": "generic",
+            "username": ""
+          },
+          "hypervisor_version": "Nutanix 20230302.186",
+          "ipmi_addr": "10.56.62.243",
+          "hypervisor_addr": "10.57.208.13",
+          "prism_name": "e9330930-ae60-4a4a-8011-be34f57162e8",
+          "svm_addr": "10.57.208.23",
+          "vcpu_count": 32,
+          "memory_capacity_bytes": 68719476736
+        },
+        {
+          "ipmi": {
+            "address": "",
+            "protocol": "none",
+            "vendor": "generic",
+            "username": ""
+          },
+          "hypervisor_version": "Nutanix 20230302.186",
+          "ipmi_addr": "10.56.62.249",
+          "hypervisor_addr": "10.57.208.18",
+          "prism_name": "5a775798-1845-48db-a72e-9da8ffba98d6",
+          "svm_addr": "10.57.208.28",
+          "vcpu_count": 32,
+          "memory_capacity_bytes": 68719476736
+        }
+      ],
+      "details": {
+        "ahv": {
+          "nodes": [
+            {
+              "disks": [
+                {
+                  "count": 2,
+                  "capacity_bytes": 1589599974699,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                },
+                {
+                  "count": 6,
+                  "capacity_bytes": 1768586635124,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                }
+              ],
+              "networks": [
+                {
+                  "uuid": "0278a958-7da8-4d2b-9163-9855185caefc",
+                  "name": "eth0",
+                  "mac_address": "7c:c2:55:34:9d:3e",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "b6c53abf-8a25-497b-a660-462d56f07553",
+                  "name": "eth1",
+                  "mac_address": "7c:c2:55:34:9d:3f",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "42d17701-eb99-4107-81a0-b5bdae250483",
+                  "name": "eth2",
+                  "mac_address": "10:70:fd:5d:d4:d8",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "907a463a-f7d2-4aa7-af04-535f9648a274",
+                  "name": "eth3",
+                  "mac_address": "10:70:fd:5d:d4:d9",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                }
+              ],
+              "hypervisor_version": "Nutanix 20230302.186",
+              "hypervisor_addr": "10.57.208.39",
+              "uuid": "f3f74b8d-7021-4ca1-b210-ab2e1ac5922f",
+              "name": "8170g8-ml-4",
+              "model": "NX-8170-G8",
+              "serial_number": "",
+              "memory_capacity_bytes": 810676125696,
+              "cpu_core_count": 64,
+              "cpu_socket_count": 2,
+              "cpu_thread_count": 128,
+              "cpu_frequency_hertz": 2200000000,
+              "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+              "disk_count": 8,
+              "disk_capacity_bytes": 13790719760142
+            },
+            {
+              "disks": [
+                {
+                  "count": 6,
+                  "capacity_bytes": 1768578543702,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                },
+                {
+                  "count": 2,
+                  "capacity_bytes": 1588550507142,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                }
+              ],
+              "networks": [
+                {
+                  "uuid": "16e43488-ad19-43bd-8aec-e1b0217225fe",
+                  "name": "eth0",
+                  "mac_address": "3c:ec:ef:fb:39:70",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "6b74f822-2756-426d-831a-064ce9332694",
+                  "name": "eth1",
+                  "mac_address": "3c:ec:ef:fb:39:71",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "65df66cd-041e-4b36-9c01-0175efd22f5a",
+                  "name": "eth2",
+                  "mac_address": "3c:ec:ef:fb:39:72",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "d21ce701-36f9-4f85-9bb4-fd32db029c44",
+                  "name": "eth3",
+                  "mac_address": "3c:ec:ef:fb:39:73",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "e3f7eaf1-9e40-46c0-914b-1854510efcb8",
+                  "name": "eth4",
+                  "mac_address": "08:c0:eb:c7:a5:3e",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "1221020d-438f-4ef3-beac-621d5ed126db",
+                  "name": "eth5",
+                  "mac_address": "08:c0:eb:c7:a5:3f",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                }
+              ],
+              "hypervisor_version": "Nutanix 20230302.186",
+              "hypervisor_addr": "10.57.208.11",
+              "uuid": "ecea1f92-38d4-4fa4-9d23-2b7310f0d71b",
+              "name": "8170g8-ml-1",
+              "model": "NX-8170-G8",
+              "serial_number": "",
+              "memory_capacity_bytes": 810676125696,
+              "cpu_core_count": 64,
+              "cpu_socket_count": 2,
+              "cpu_thread_count": 128,
+              "cpu_frequency_hertz": 2200000000,
+              "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+              "disk_count": 8,
+              "disk_capacity_bytes": 13788572276496
+            },
+            {
+              "disks": [
+                {
+                  "count": 6,
+                  "capacity_bytes": 1768578543702,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                },
+                {
+                  "count": 2,
+                  "capacity_bytes": 1588550507142,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                }
+              ],
+              "networks": [
+                {
+                  "uuid": "c9986a1c-a4dc-4071-b7cd-d4ef5b8681f4",
+                  "name": "eth0",
+                  "mac_address": "3c:ec:ef:fc:d2:30",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "6a43b416-72d2-4838-8bee-6b42872f9b88",
+                  "name": "eth1",
+                  "mac_address": "3c:ec:ef:fc:d2:31",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "6ec9b6f4-5ebb-484f-ac8c-5ac4d73f6bd1",
+                  "name": "eth2",
+                  "mac_address": "3c:ec:ef:fc:d2:32",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "a5c4b95a-e590-497a-a638-d1ff634d50fc",
+                  "name": "eth3",
+                  "mac_address": "3c:ec:ef:fc:d2:33",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "8141ce30-6e83-4023-8619-817e08dd1f6e",
+                  "name": "eth4",
+                  "mac_address": "08:c0:eb:c7:a5:32",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "cfd9627b-9772-42e5-81e5-eda91053b3f4",
+                  "name": "eth5",
+                  "mac_address": "08:c0:eb:c7:a5:33",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                }
+              ],
+              "hypervisor_version": "Nutanix 20230302.186",
+              "hypervisor_addr": "10.57.208.12",
+              "uuid": "443d5356-1b2f-4cb6-b669-66ae783f0fe4",
+              "name": "8170g8-ml-2",
+              "model": "NX-8170-G8",
+              "serial_number": "",
+              "memory_capacity_bytes": 810676125696,
+              "cpu_core_count": 64,
+              "cpu_socket_count": 2,
+              "cpu_thread_count": 128,
+              "cpu_frequency_hertz": 2200000000,
+              "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+              "disk_count": 8,
+              "disk_capacity_bytes": 13788572276496
+            },
+            {
+              "disks": [
+                {
+                  "count": 6,
+                  "capacity_bytes": 1768578543702,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                },
+                {
+                  "count": 2,
+                  "capacity_bytes": 1588550507142,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                }
+              ],
+              "networks": [
+                {
+                  "uuid": "0fd9be57-d3e6-49f7-b378-dc28b358d4f1",
+                  "name": "eth0",
+                  "mac_address": "3c:ec:ef:fc:ce:b8",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "ee966ca2-715b-45d4-b22a-9bed314a201e",
+                  "name": "eth1",
+                  "mac_address": "3c:ec:ef:fc:ce:b9",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "16ee1d7b-a72a-4fed-89d5-837810f472cf",
+                  "name": "eth2",
+                  "mac_address": "3c:ec:ef:fc:ce:ba",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "88063a54-5ffc-4ff6-aa2e-e2a51d84e296",
+                  "name": "eth3",
+                  "mac_address": "3c:ec:ef:fc:ce:bb",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "1e07b44e-63b4-4efd-a88a-a26a1016cdbf",
+                  "name": "eth4",
+                  "mac_address": "08:c0:eb:c7:a5:2e",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "41ba3cb0-52de-4f10-aaf1-ec87e48f7a88",
+                  "name": "eth5",
+                  "mac_address": "08:c0:eb:c7:a5:2f",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                }
+              ],
+              "hypervisor_version": "Nutanix 20230302.186",
+              "hypervisor_addr": "10.57.208.13",
+              "uuid": "e9330930-ae60-4a4a-8011-be34f57162e8",
+              "name": "8170g8-ml-3",
+              "model": "NX-8170-G8",
+              "serial_number": "",
+              "memory_capacity_bytes": 810676125696,
+              "cpu_core_count": 64,
+              "cpu_socket_count": 2,
+              "cpu_thread_count": 128,
+              "cpu_frequency_hertz": 2200000000,
+              "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+              "disk_count": 8,
+              "disk_capacity_bytes": 13788572276496
+            },
+            {
+              "disks": [
+                {
+                  "count": 6,
+                  "capacity_bytes": 1768578543702,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                },
+                {
+                  "count": 2,
+                  "capacity_bytes": 1588550507142,
+                  "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                  "type": "SSD",
+                  "bus": "PCIe",
+                  "vendor": "Not Available"
+                }
+              ],
+              "networks": [
+                {
+                  "uuid": "9f4420e6-4abd-462f-b604-f4bfed500027",
+                  "name": "eth0",
+                  "mac_address": "7c:c2:55:34:b3:ee",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "46a7c2f3-cd92-4044-9fc6-55c1622c05e9",
+                  "name": "eth1",
+                  "mac_address": "7c:c2:55:34:b3:ef",
+                  "device": "unknown",
+                  "link_speed_bits_per_second": -1,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "unknown",
+                  "switch_id": "unknown",
+                  "rdma_enabled": false,
+                  "link_detected": false,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "48daf13e-00dd-4aa2-b8c5-810c00edc3cb",
+                  "name": "eth2",
+                  "mac_address": "10:70:fd:5d:d6:a4",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                },
+                {
+                  "uuid": "4cfec550-21a3-4ea5-89f6-bf367f7bdc6e",
+                  "name": "eth3",
+                  "mac_address": "10:70:fd:5d:d6:a5",
+                  "device": "DRM3-PERF-AR-12",
+                  "link_speed_bits_per_second": 100000000000,
+                  "dhcp_enabled": false,
+                  "mtu_in_bytes": 1500,
+                  "discovery_protocol": "LLDP",
+                  "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                  "rdma_enabled": false,
+                  "link_detected": true,
+                  "model_name": "unknown"
+                }
+              ],
+              "hypervisor_version": "Nutanix 20230302.186",
+              "hypervisor_addr": "10.57.208.18",
+              "uuid": "5a775798-1845-48db-a72e-9da8ffba98d6",
+              "name": "8170g8-ml-5",
+              "model": "NX-8170-G8",
+              "serial_number": "",
+              "memory_capacity_bytes": 810676125696,
+              "cpu_core_count": 64,
+              "cpu_socket_count": 2,
+              "cpu_thread_count": 128,
+              "cpu_frequency_hertz": 2200000000,
+              "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+              "disk_count": 8,
+              "disk_capacity_bytes": 13788572276496
+            }
+          ],
+          "cluster_name": "8170g8-ml",
+          "cluster_version": "6.7",
+          "cluster_type": "nutanix",
+          "cluster_manager_type": "prism_element",
+          "cluster_manager_version": "6.7",
+          "cluster_node_count": 5,
+          "memory_capacity_bytes": 4053380628480,
+          "cpu_core_count": 320,
+          "cpu_socket_count": 10,
+          "cpu_thread_count": 640,
+          "storage_capacity_bytes": 34472504433063,
+          "storage_available_bytes": 16356530196903,
+          "storage_physical_capacity_bytes": -1,
+          "storage_usable_capacity_bytes": 34472504433063,
+          "storage_replication_factor": 2
+        },
+        "type": "ahv"
+      },
+      "name": "Nutanix_Files_8170g8",
+      "context.cluster.type": "nutanix",
+      "context.cluster.name": "8170g8-ml",
+      "context.cluster.id": "0005fe0b-f6ab-3a1d-0aef-7cc25505ff8a",
+      "context.cluster.version": "6.7",
+      "context.hypervisor.type": "kvm",
+      "context.manager.type": "prism",
+      "context.manager.version": "6.7",
+      "context.state": "active",
+      "context.Nutanix_Files_Version": 4.3,
+      "context.Nutanix_Files_NFS_Share_Type": "Distributed",
+      "context.Nutanix_Files_NFS_vDisks_Perf_FSVM_Share": 14,
+      "FSVM Workload Type For Share": "Sequential",
+      "context.CVM_vCPUs": 32,
+      "context.CVM_RAM": "64GiB",
+      "context.FSVM_vCPUs": 24,
+      "context.FSVM_RAM": "256GiB",
+      "context.FSVM_NUMA_PINNED": 1,
+      "context.FSVM_Interface_Queues": 8,
+      "context.FSVM_Interrupt_Pinning": "yes",
+      "context.Client_OS": "Ubuntu OS - Ubuntu 22.04.2 LTS Kernel: 5.15.0-76-generic",
+      "context.Client_Number_of_vCPUs": 64,
+      "context.Client_RAM": "180GiB",
+      "context.Client Swap": "off",
+      "context.Client_NFS Mount Version": 4.0,
+      "context.Client_sunrpc.tcp_slot_table_entries": 32
+    }
+  },
+  "target": {
+    "id": "92941819-c32b-43a2-b26f-c08267871264",
+    "context.prism.address": "10.57.208.20",
+    "context.prism.username": "admin",
+    "context.prism.cluster": "8170g8-ml",
+    "context.prism.container": "default-container-1155262153028",
+    "context.prism.network": "vlan211",
+    "context.nodes": [
+      {
+        "ipmi": {
+          "address": "",
+          "protocol": "none",
+          "vendor": "generic",
+          "username": ""
+        },
+        "hypervisor_version": "Nutanix 20230302.186",
+        "ipmi_addr": "10.56.62.250",
+        "hypervisor_addr": "10.57.208.39",
+        "prism_name": "f3f74b8d-7021-4ca1-b210-ab2e1ac5922f",
+        "svm_addr": "10.57.208.49",
+        "vcpu_count": 32,
+        "memory_capacity_bytes": 68719476736
+      },
+      {
+        "ipmi": {
+          "address": "",
+          "protocol": "none",
+          "vendor": "generic",
+          "username": ""
+        },
+        "hypervisor_version": "Nutanix 20230302.186",
+        "ipmi_addr": "10.56.62.241",
+        "hypervisor_addr": "10.57.208.11",
+        "prism_name": "ecea1f92-38d4-4fa4-9d23-2b7310f0d71b",
+        "svm_addr": "10.57.208.21",
+        "vcpu_count": 32,
+        "memory_capacity_bytes": 68719476736
+      },
+      {
+        "ipmi": {
+          "address": "",
+          "protocol": "none",
+          "vendor": "generic",
+          "username": ""
+        },
+        "hypervisor_version": "Nutanix 20230302.186",
+        "ipmi_addr": "10.56.62.242",
+        "hypervisor_addr": "10.57.208.12",
+        "prism_name": "443d5356-1b2f-4cb6-b669-66ae783f0fe4",
+        "svm_addr": "10.57.208.22",
+        "vcpu_count": 32,
+        "memory_capacity_bytes": 68719476736
+      },
+      {
+        "ipmi": {
+          "address": "",
+          "protocol": "none",
+          "vendor": "generic",
+          "username": ""
+        },
+        "hypervisor_version": "Nutanix 20230302.186",
+        "ipmi_addr": "10.56.62.243",
+        "hypervisor_addr": "10.57.208.13",
+        "prism_name": "e9330930-ae60-4a4a-8011-be34f57162e8",
+        "svm_addr": "10.57.208.23",
+        "vcpu_count": 32,
+        "memory_capacity_bytes": 68719476736
+      },
+      {
+        "ipmi": {
+          "address": "",
+          "protocol": "none",
+          "vendor": "generic",
+          "username": ""
+        },
+        "hypervisor_version": "Nutanix 20230302.186",
+        "ipmi_addr": "10.56.62.249",
+        "hypervisor_addr": "10.57.208.18",
+        "prism_name": "5a775798-1845-48db-a72e-9da8ffba98d6",
+        "svm_addr": "10.57.208.28",
+        "vcpu_count": 32,
+        "memory_capacity_bytes": 68719476736
+      }
+    ],
+    "details": {
+      "ahv": {
+        "nodes": [
+          {
+            "disks": [
+              {
+                "count": 2,
+                "capacity_bytes": 1589599974699,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              },
+              {
+                "count": 6,
+                "capacity_bytes": 1768586635124,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              }
+            ],
+            "networks": [
+              {
+                "uuid": "0278a958-7da8-4d2b-9163-9855185caefc",
+                "name": "eth0",
+                "mac_address": "7c:c2:55:34:9d:3e",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "b6c53abf-8a25-497b-a660-462d56f07553",
+                "name": "eth1",
+                "mac_address": "7c:c2:55:34:9d:3f",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "42d17701-eb99-4107-81a0-b5bdae250483",
+                "name": "eth2",
+                "mac_address": "10:70:fd:5d:d4:d8",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "907a463a-f7d2-4aa7-af04-535f9648a274",
+                "name": "eth3",
+                "mac_address": "10:70:fd:5d:d4:d9",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              }
+            ],
+            "hypervisor_version": "Nutanix 20230302.186",
+            "hypervisor_addr": "10.57.208.39",
+            "uuid": "f3f74b8d-7021-4ca1-b210-ab2e1ac5922f",
+            "name": "8170g8-ml-4",
+            "model": "NX-8170-G8",
+            "serial_number": "",
+            "memory_capacity_bytes": 810676125696,
+            "cpu_core_count": 64,
+            "cpu_socket_count": 2,
+            "cpu_thread_count": 128,
+            "cpu_frequency_hertz": 2200000000,
+            "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+            "disk_count": 8,
+            "disk_capacity_bytes": 13790719760142
+          },
+          {
+            "disks": [
+              {
+                "count": 6,
+                "capacity_bytes": 1768578543702,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              },
+              {
+                "count": 2,
+                "capacity_bytes": 1588550507142,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              }
+            ],
+            "networks": [
+              {
+                "uuid": "16e43488-ad19-43bd-8aec-e1b0217225fe",
+                "name": "eth0",
+                "mac_address": "3c:ec:ef:fb:39:70",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "6b74f822-2756-426d-831a-064ce9332694",
+                "name": "eth1",
+                "mac_address": "3c:ec:ef:fb:39:71",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "65df66cd-041e-4b36-9c01-0175efd22f5a",
+                "name": "eth2",
+                "mac_address": "3c:ec:ef:fb:39:72",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "d21ce701-36f9-4f85-9bb4-fd32db029c44",
+                "name": "eth3",
+                "mac_address": "3c:ec:ef:fb:39:73",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "e3f7eaf1-9e40-46c0-914b-1854510efcb8",
+                "name": "eth4",
+                "mac_address": "08:c0:eb:c7:a5:3e",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "1221020d-438f-4ef3-beac-621d5ed126db",
+                "name": "eth5",
+                "mac_address": "08:c0:eb:c7:a5:3f",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              }
+            ],
+            "hypervisor_version": "Nutanix 20230302.186",
+            "hypervisor_addr": "10.57.208.11",
+            "uuid": "ecea1f92-38d4-4fa4-9d23-2b7310f0d71b",
+            "name": "8170g8-ml-1",
+            "model": "NX-8170-G8",
+            "serial_number": "",
+            "memory_capacity_bytes": 810676125696,
+            "cpu_core_count": 64,
+            "cpu_socket_count": 2,
+            "cpu_thread_count": 128,
+            "cpu_frequency_hertz": 2200000000,
+            "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+            "disk_count": 8,
+            "disk_capacity_bytes": 13788572276496
+          },
+          {
+            "disks": [
+              {
+                "count": 6,
+                "capacity_bytes": 1768578543702,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              },
+              {
+                "count": 2,
+                "capacity_bytes": 1588550507142,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              }
+            ],
+            "networks": [
+              {
+                "uuid": "c9986a1c-a4dc-4071-b7cd-d4ef5b8681f4",
+                "name": "eth0",
+                "mac_address": "3c:ec:ef:fc:d2:30",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "6a43b416-72d2-4838-8bee-6b42872f9b88",
+                "name": "eth1",
+                "mac_address": "3c:ec:ef:fc:d2:31",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "6ec9b6f4-5ebb-484f-ac8c-5ac4d73f6bd1",
+                "name": "eth2",
+                "mac_address": "3c:ec:ef:fc:d2:32",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "a5c4b95a-e590-497a-a638-d1ff634d50fc",
+                "name": "eth3",
+                "mac_address": "3c:ec:ef:fc:d2:33",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "8141ce30-6e83-4023-8619-817e08dd1f6e",
+                "name": "eth4",
+                "mac_address": "08:c0:eb:c7:a5:32",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "cfd9627b-9772-42e5-81e5-eda91053b3f4",
+                "name": "eth5",
+                "mac_address": "08:c0:eb:c7:a5:33",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              }
+            ],
+            "hypervisor_version": "Nutanix 20230302.186",
+            "hypervisor_addr": "10.57.208.12",
+            "uuid": "443d5356-1b2f-4cb6-b669-66ae783f0fe4",
+            "name": "8170g8-ml-2",
+            "model": "NX-8170-G8",
+            "serial_number": "",
+            "memory_capacity_bytes": 810676125696,
+            "cpu_core_count": 64,
+            "cpu_socket_count": 2,
+            "cpu_thread_count": 128,
+            "cpu_frequency_hertz": 2200000000,
+            "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+            "disk_count": 8,
+            "disk_capacity_bytes": 13788572276496
+          },
+          {
+            "disks": [
+              {
+                "count": 6,
+                "capacity_bytes": 1768578543702,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              },
+              {
+                "count": 2,
+                "capacity_bytes": 1588550507142,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              }
+            ],
+            "networks": [
+              {
+                "uuid": "0fd9be57-d3e6-49f7-b378-dc28b358d4f1",
+                "name": "eth0",
+                "mac_address": "3c:ec:ef:fc:ce:b8",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "ee966ca2-715b-45d4-b22a-9bed314a201e",
+                "name": "eth1",
+                "mac_address": "3c:ec:ef:fc:ce:b9",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "16ee1d7b-a72a-4fed-89d5-837810f472cf",
+                "name": "eth2",
+                "mac_address": "3c:ec:ef:fc:ce:ba",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "88063a54-5ffc-4ff6-aa2e-e2a51d84e296",
+                "name": "eth3",
+                "mac_address": "3c:ec:ef:fc:ce:bb",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "1e07b44e-63b4-4efd-a88a-a26a1016cdbf",
+                "name": "eth4",
+                "mac_address": "08:c0:eb:c7:a5:2e",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "41ba3cb0-52de-4f10-aaf1-ec87e48f7a88",
+                "name": "eth5",
+                "mac_address": "08:c0:eb:c7:a5:2f",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              }
+            ],
+            "hypervisor_version": "Nutanix 20230302.186",
+            "hypervisor_addr": "10.57.208.13",
+            "uuid": "e9330930-ae60-4a4a-8011-be34f57162e8",
+            "name": "8170g8-ml-3",
+            "model": "NX-8170-G8",
+            "serial_number": "",
+            "memory_capacity_bytes": 810676125696,
+            "cpu_core_count": 64,
+            "cpu_socket_count": 2,
+            "cpu_thread_count": 128,
+            "cpu_frequency_hertz": 2200000000,
+            "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+            "disk_count": 8,
+            "disk_capacity_bytes": 13788572276496
+          },
+          {
+            "disks": [
+              {
+                "count": 6,
+                "capacity_bytes": 1768578543702,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              },
+              {
+                "count": 2,
+                "capacity_bytes": 1588550507142,
+                "model": "SAMSUNG MZQL21T9HCJR-00A07",
+                "type": "SSD",
+                "bus": "PCIe",
+                "vendor": "Not Available"
+              }
+            ],
+            "networks": [
+              {
+                "uuid": "9f4420e6-4abd-462f-b604-f4bfed500027",
+                "name": "eth0",
+                "mac_address": "7c:c2:55:34:b3:ee",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "46a7c2f3-cd92-4044-9fc6-55c1622c05e9",
+                "name": "eth1",
+                "mac_address": "7c:c2:55:34:b3:ef",
+                "device": "unknown",
+                "link_speed_bits_per_second": -1,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "unknown",
+                "switch_id": "unknown",
+                "rdma_enabled": false,
+                "link_detected": false,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "48daf13e-00dd-4aa2-b8c5-810c00edc3cb",
+                "name": "eth2",
+                "mac_address": "10:70:fd:5d:d6:a4",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              },
+              {
+                "uuid": "4cfec550-21a3-4ea5-89f6-bf367f7bdc6e",
+                "name": "eth3",
+                "mac_address": "10:70:fd:5d:d6:a5",
+                "device": "DRM3-PERF-AR-12",
+                "link_speed_bits_per_second": 100000000000,
+                "dhcp_enabled": false,
+                "mtu_in_bytes": 1500,
+                "discovery_protocol": "LLDP",
+                "switch_id": "Arista Networks EOS version 4.25.1F running on an Arista Networks DCS-7060CX-32S",
+                "rdma_enabled": false,
+                "link_detected": true,
+                "model_name": "unknown"
+              }
+            ],
+            "hypervisor_version": "Nutanix 20230302.186",
+            "hypervisor_addr": "10.57.208.18",
+            "uuid": "5a775798-1845-48db-a72e-9da8ffba98d6",
+            "name": "8170g8-ml-5",
+            "model": "NX-8170-G8",
+            "serial_number": "",
+            "memory_capacity_bytes": 810676125696,
+            "cpu_core_count": 64,
+            "cpu_socket_count": 2,
+            "cpu_thread_count": 128,
+            "cpu_frequency_hertz": 2200000000,
+            "cpu_model": "Intel(R) Xeon(R) Platinum 8352Y CPU @ 2.20GHz",
+            "disk_count": 8,
+            "disk_capacity_bytes": 13788572276496
+          }
+        ],
+        "cluster_name": "8170g8-ml",
+        "cluster_version": "6.7",
+        "cluster_type": "nutanix",
+        "cluster_manager_type": "prism_element",
+        "cluster_manager_version": "6.7",
+        "cluster_node_count": 5,
+        "memory_capacity_bytes": 4053380628480,
+        "cpu_core_count": 320,
+        "cpu_socket_count": 10,
+        "cpu_thread_count": 640,
+        "storage_capacity_bytes": 34472504433063,
+        "storage_available_bytes": 16356530196903,
+        "storage_physical_capacity_bytes": -1,
+        "storage_usable_capacity_bytes": 34472504433063,
+        "storage_replication_factor": 2
+      },
+      "type": "ahv"
+    },
+    "name": "Nutanix_Files_8170g8",
+    "context.cluster.type": "nutanix",
+    "context.cluster.name": "8170g8-ml",
+    "context.cluster.id": "0005fe0b-f6ab-3a1d-0aef-7cc25505ff8a",
+    "context.cluster.version": "6.7",
+    "context.hypervisor.type": "kvm",
+    "context.manager.type": "prism",
+    "context.manager.version": "6.7",
+    "context.state": "active",
+    "context.shared_with_emails": "",
+    "context.created.at": "1688516139",
+    "context.updated.at": "1688516139"
+  },
+  "MLPERF_Storage_Description": {
+    "node_count": 5
+  },
+  "storage_system": {
+    "category": "commercial",
+    "type": "NFS"
+  },
+  "hardware": [
+    {
+      "Physical Host Count": 5,
+      "Vendor": "Nutanix",
+      "Drive Type": "NVMe",
+      "Total Number of NVME Drives per Host": "8",
+      "Total number of NVME Drives": "40",
+      "Total Storage Capacity (Physical)": "63 TiB",
+      "Drive Type Model": "SAMSUNG MZQL21T9HCJR-00A07",
+      "Per Drive Capacity (Logical)": "1.61 TiB"
+    }
+  ]
+}

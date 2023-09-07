@@ -1,0 +1,10 @@
+- workload=unet3d
+- ++workload.workflow.generate_data=False
+- ++workload.workflow.train=True
+- ++workload.dataset.data_folder=/mnt/NTNX_NFS_Files/client1fs54
+- ++workload.dataset.num_files_train=25000
+- ++workload.checkpoint.checkpoint_folder=/mnt/NTNX_NFS_Files/client1fs54
+- ++workload.reader.read_threads=4
+- ++workload.dataset.num_subfolders_train=20
+- ++workload.workflow.profiling=False
+- ++workload.profiling.profiler=none

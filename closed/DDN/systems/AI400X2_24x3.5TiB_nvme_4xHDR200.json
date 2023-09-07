@@ -1,0 +1,76 @@
+{
+  "host_node": {
+    "node_count": 16,
+    "OS_version": "Rocky Linux release 8.7 (Green Obsidian)",
+    "memory_capacity_gigabytes": "99",
+    "cpu_core_count": 20,
+    "cpu_socket_count": 1,
+    "cpu_frequency_gigahertz": 3.7,
+    "cpu_model": "Intel(R) Xeon(R) Gold 6138 CPU",
+    "commercial_name": "Intel S2600BPB",
+    "exascaler_driver_version": "2.14.0_ddn85"
+  },
+  "storage_system": {
+    "category": "commercial",
+    "software_specification": "EXAScaler SFA Rocky 6.2.0-r9",
+    "type": "Lustre/EXAScaler",
+    "commercial_name": "AI400X2",
+    "appliance_size": "2U",
+    "total_read_bandwidth_sequential_GB_per_sec": 90,
+    "total_write_bandwidth_sequential_GB_per_sec": 60,
+    "total_storage_capacity_TB": 64,
+    "total_cpu_core_count": 96,
+    "memory_capacity_gigabytes" : 807.5,
+    "total_number_of_MDTs": 4,
+    "total_number_of_OSTs": 8,
+    "data_replication_level": 0,
+    "total_number_of_EXAScaler_VMs": 4,
+    "drive_Failure_Tolerance": "8+2",
+    "VM_Failure_Tolerance:": "1+3",
+    "controller_Failure_Tolerance": "1+1",
+    "hardware": [
+      {
+        "Count": 24,
+        "Vendor": "SAMSUNG",
+        "type": "SSD (TLC)",
+        "Model": "MZWLR3T8HCLS-00A07",
+        "protocol": "NVME",
+        "Disk_capacity_gigabytes": "3300"
+    },
+        {
+        "Count": 4,
+        "Vendor": "Mellanox",
+        "type": "Dual-port IB network adapter",
+        "Model": "ConnectX-6 VPI adapter card ((MT4123 - MCX653106A-HDAT) - Dual-ports QSFP56 (HDR200)" ,
+        "protocol": "IB",
+        "total_ib_links": 4
+    },
+        {
+        "Count": 2,
+        "type": "SFA controller",
+        "cpu_model": "Intel(R) Xeon(R) Gold 5318Y CPU",
+        "cpu_core_count_per_socket": 24,
+        "cpu_socket_count": 2,
+        "hot_swappable_controller": "yes",
+        "redundancy": "active/active",
+        "mirrored_internal_disks": 2,
+        "model_internal_disk": "VSFAN8CI512G-V11-H",
+        "raid_level_internal_disks": "RAID1",
+        "Internal_disk_capacity_gigabytes": 511,
+        "OS_version": "SFAOS 12.2.0.3",
+        "can_access_all_drives": "yes",
+        "EXAScaler_VMs": 2
+    }
+    ]
+  },
+  "host_to_storage_interconnect": [
+    {
+      "interconnect_type": "InfiniBand",
+      "Vendor": "Mellanox",
+      "Model": "ConnectX-6 VPI adapter card (HDR100, EDR IB and 100GbE), dual-port QSFP56",
+      "link_speed_gigabits_per_second": 200,
+      "number_of_link_used": 1,
+      "rdma_enabled": true
+  }
+  ]
+}
