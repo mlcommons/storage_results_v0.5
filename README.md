@@ -31,13 +31,14 @@ A submission should take the form of a directory with the following structure. T
     └── results
         └── <system_desc_id> # (one folder for each system benchmarked)
             └── <benchmark> #which workload is this
+                ├── mlperf_storage_report.json #overall pass/fail and statistical summary of this workload
                 └── run<1-5> #(one folder per final run of the benchmark)
-                    └── <date-and-time> #(folder with results from a final run of the benchmark)
+                    └── <identifier> #(one folder for each client system during this run)
                         ├── configs #configuraton active for this run of the benchmark
                         │   ├── config.yaml #defines the I/O parameters for of the workload for this test
                         │   ├── hydra.yaml #defines the MPI configuration used for this test
                         │   └── overrides.yaml #records all comand line options used for this test
-                        ├── 0_output.json #raw output of the test run
+                        ├── <accnumber>_output.json #raw output of the test run
                         ├── dlio.log #complete log of I/O operations performed by the test
                         ├── per_epoch_stats.json #array of stats for each epoch processed during the tes
                         └── summary.json #summary of the test's pass/fail status and core statistics
@@ -48,3 +49,7 @@ System names and implementation names may be arbitrary.
 `<division>` must be one of {closed, open}.
 
 `<benchmark>` must be one of {bert, unet3d}.
+
+`<identifier>` is user-defined but typically the name of a client system.
+
+`<accnumber>` is a number {0,1,...,n} for each simulated accelerator during this run.
